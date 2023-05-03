@@ -306,7 +306,7 @@ From the search bar, type in Windows Features and choose ‘turn windows feature
 1) “Virtual Machine Platform” and
 2)  “Windows Subsystem for Linux”
 Then click “OK” and when prompted restart your computer.
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_01.png)
 
 #### Chrome
 Download chrome from [https://chrome.google.com](https://chrome.google.com), run the installer and open Chrome. Follow the setup steps for Chrome, and make it your default browser. If you choose not to make Chrome your default browser, that’s okay, but every example will be using Chrome, so please install it so you don’t have to interpolate all instructions.
@@ -323,7 +323,7 @@ On your start menu, type ‘fonts’ into the search bar and click ‘Fonts, con
 #### Windows Terminal
 
 If you’re using Windows Version 11 22H2, you will not need to do this step, Terminal is installed by default. You can check your version of Windows by running: search > system settings > system > about. The second panel ‘Windows specification’ should look similar to this:
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_02.png)
 
 Open your Microsoft Store application, usually on the start menu or in the Taskbar. Type ‘Windows Terminal’ in the search bar. Choose the Windows Terminal application (Not the Preview) and install it.
 
@@ -332,7 +332,7 @@ In your taskbar, search for ‘Terminal’, this will open Powershell the first 
 
 ##### Setting up your Terminal
 While your Terminal is open, look at the top bar, an you’ll see a small down arrow:
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_03.png)
 
 Click here and choose settings. Then choose Profiles > Default > Appearance from the left-hand menu.
 
@@ -429,7 +429,7 @@ A typical set of answers, if you are unsure are as follows (if you don’t see t
 * Overwrite: Y
 
 Once complete, you should have a shell that looks similar to the following:
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_04.png)
 
 #### Node JS, Go, and Python
 We will run all of our commands directly from our Linux terminal for setting up our tools
@@ -514,7 +514,7 @@ cd ~ && code .
 You will be automatically prompted to install WSL and restart. Do that, then close code and run the same command above. This will install a process on Linux to allow it to seamlessly use VS Code on Windows.
 
 Now, click on the extension icon on the left, you’ll see something like this:
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_05.png)
 
 Make sure to select the WSL vertical tab, then install the following plugins:
 
@@ -532,7 +532,6 @@ Lastly, let’s add some global configuration, on the “settings” icon in the
 
 The following settings can be applied globally so you WILL NOT have to do this for every project:
 
-(WARN_UNRECOGNIZED_ELEMENT: PAGE_BREAK)
 
 ```json
 {
@@ -592,35 +591,34 @@ Navigate to your Downloads folder, and execute the following installers:
 ##### Git
 
 When prompted, change the default location to “c:\dev\git”
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_06.png)
 Accept defaults until you get to the choose editor screen, and select “Visual Studio Code”:
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_07.png)
 
 Then select to override the default branch to “main”.
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_08.png)
 
 Then select defaults until the line endings screen and change to:
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_09.png)
 Then accept defaults until complete.
 
 ##### Go
 
 Go, make sure to change the install location on the following screen to ‘c:\dev\go”.
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_10_go.png)
 
-(WARN_UNRECOGNIZED_ELEMENT: PAGE_BREAK)
 
 ##### Python
 Choose custom install from the initial screen, change the python default location to “c:\dev\python” and check the following options.
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_11_python.png)
 
 ##### Node JS
 On the install directory screen, enter ‘c:\dev\nodejs’. Then ensure you check “Install the necessary tools…”, then complete the install. A terminal window will appear, simply accept and use the defaults to install ‘Chocolaty’, a Windows package manager for additional tools.
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_11_node.png)
 
 Now, restart your computer, because it’s windows and if Powershell was opened once, it won’t read new variables until restarted.
 
 #### Validation
 At this point, all of the tools are installed on your computer. To verify they are installed, open your Windows Terminal Powershell and issue the following commands:
 
-![](WARN_REPLACE_IMG_URL)
+![](images/wsl_validation.png)
