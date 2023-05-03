@@ -23,9 +23,13 @@ The project will last aproximatly two weeks in which time the team will employ t
 a simple calculator application with a help and about page. The team will learn how to employ Git best practices
 for working on a team while learning to self organize and bring projects to others.
 
-## Full project scope
+## Contributors
 
-[Scope Document](https://docs.google.com/document/d/1DDYUGo_CwyumrDAu96QKbdtEUvBFnjKaGS8IQpS7tP8/edit?usp=sharing)
+[April - May 2023](courseware/april_may_2023.md)
+
+## Agile Project and Scope
+
+[Scope Document](courseware/agile.md)
 
 ## Setup
 
