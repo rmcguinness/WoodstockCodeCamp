@@ -495,7 +495,7 @@ From your shell again, use the following commands to verify your environment:
 source ~/.zshrc
 
 # Verify Python
-python --version
+python3 --version
 
 # Verify Go
 go version
