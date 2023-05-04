@@ -443,11 +443,11 @@ cd Downloads
 
 # Download Node JS (Interpreter for tools Java Script)
 
-wget [https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.xz](https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.xz)
+wget https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.xz
 
 # Download Go (Interpreter and tools for Go)
 
-wget [https://go.dev/dl/go1.20.3.linux-amd64.tar.gz](https://go.dev/dl/go1.20.3.linux-amd64.tar.gz)
+wget https://go.dev/dl/go1.20.3.linux-amd64.tar.gz
 
 # Python is already installed as part of Linux
 
