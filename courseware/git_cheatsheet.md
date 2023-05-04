@@ -45,7 +45,32 @@ git config --global user.name 'Jane Doe'
 ```
 
 ## Creating an SSH Key and adding it to GitHub
-<INSERT CONTENT HERE>
+The purpose of this document is to set up an SSH key on your computer for use between your computer and GitHub so that when you use the git clone command you can use the ssh link as opposed to using the https link from GitHub.
+1.	Open your terminal and paste the following command. Make sure to insert your email address into this:
+	ssh-keygen -t ed25519 -C "your_email@example.com"
+
+This creates a new SSH key, using the provided email as a label.
+2.	When you're prompted to "Enter a file in which to save the key", you can press Enter to accept the default file location.
+3.	At the prompt, type a secure passphrase.
+Next, we are going to add the SSH Key that you created to the ssh-agent which manages your keys for you.
+1.	Inside your terminal copy the following command which will ensure ssh-agent is running.
+eval "$(ssh-agent -s)"
+2.	Now copy the following command which will add the private key you just created to the ssh-agent.
+ssh-add ~/.ssh/id_ed25519
+Now that you have done this, we will need to add your SSH key to your GitHub account. To do this we need to copy your SSH public key to your clipboard. IMPORTANT depending on your system copy one of the two commands below into your terminal:
+For Non-WSL users:
+	clip < ~/.ssh/id_ed25519.pub
+For WSL Users
+	Clip.exe < ~/.ssh/id_ed25519.pub
+Once this is done go to your GitHub account and click on your profile picture then go to your settings.
+1.	In the "Access" section of the sidebar, click  SSH and GPG keys.
+2.	Click New SSH key or Add SSH key.
+3.	In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal laptop".
+4.	Select the type of key, either authentication or signing. For more information about commit signing, see "About commit signature verification."
+5.	In the "Key" field, paste your public key.
+6.	Click Add SSH key.
+7.	If prompted, confirm access to your account on GitHub.
+
 
 ## Command Dictionary
 
