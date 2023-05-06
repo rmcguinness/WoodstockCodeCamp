@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import {strState} from './State'
 import './App.css'
-import State from './State.jsx'
+import { useRecoilState } from 'recoil'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [display, setDisplay] = useRecoilState(strState)
+
 
   return (
     <>
-
+      <div>State value is: {display}</div>
     </>
   )
 }
