@@ -1,9 +1,9 @@
-import {strState} from './State'
 import './App.css'
 import { useRecoilState } from 'recoil'
+import {strState} from './State'
 
 function App() {
-  const [display, setDisplay] = useRecoilState(strState)
+  const [display] = useRecoilState(strState)
   return (
     <>
       <h1>Calculator Application</h1>
