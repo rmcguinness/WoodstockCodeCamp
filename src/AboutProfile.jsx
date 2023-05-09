@@ -12,12 +12,34 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+let bioObjs = [{
+    id: 0,
+    name: 'Heather Jackson',
+    email: 'heather.jackson2003@gmail.com',
+  },
+
+  {
+    id: 1,
+    name: 'Sally Mae',
+    email: 'example@gmail.com',
+    
+  },
+]
+
 const AboutProfile = () => {
+
+  let arrayBioObjs = bioObjs.map(bioObj => 
+    <li key={bioObj.id}>
+      <ul>{bioObj.name}</ul>
+      <ul>{bioObj.email}</ul>
+    </li>
+  )
+
   return(
     <>
-      <h5>About</h5>
+      <ul>{arrayBioObjs}</ul>
     </>
-  )
+  );
 }
 
 export default AboutProfile;
