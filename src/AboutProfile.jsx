@@ -26,7 +26,7 @@ let bioObjs = [{
     name: 'Sally Mae',
     email: 'example@gmail.com',
     avatar: heatherAvatar,
-    bio: '',
+    bio: "Hi, it's me.  I'm the problem, it's me",
   },
 ]
 
