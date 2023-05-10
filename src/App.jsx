@@ -1,7 +1,7 @@
 import './App.css'
 import { useRecoilState } from 'recoil'
 import {strState} from './State'
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, Outlet} from "react-router-dom";
 import Header from './Header'
 import Calculator from './Calculator'
 import Help from './Help'
@@ -13,15 +13,15 @@ function App() {
   return (
     <>
      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/help" element={<Help />} />
+        <Route path="/" element={<Layout />} >
+          <Route index element={<Calculator />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/help" element={<Help />} />
+        </Route>
       </Routes>
       <h1>Calculator Application</h1>
       <div>State value is: {display}</div>
 
-      <Header />
-      <hr/>
       <Calculator />
       <hr/>
       <Help />
@@ -31,6 +31,15 @@ function App() {
       <Footer />
     </>
   )
+}
+function Layout() {
+  return (
+    <div>
+      <Header />
+      <hr />
+      <Outlet />
+    </div>
+  );
 }
 
 export default App
