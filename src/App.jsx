@@ -2,7 +2,9 @@ import './App.css'
 import { useRecoilState } from 'recoil'
 import {strState} from './State'
 
+
 import {Routes, Route, Outlet} from "react-router-dom";
+
 
 import Header from './Header'
 import Calculator from './Calculator'
@@ -42,7 +44,9 @@ function Layout() {
       <Header />
       <hr />
       <Outlet />
+
       <Footer />
+
     </div>
   );
 }
