@@ -1,9 +1,7 @@
 import './App.css'
 import { useRecoilState } from 'recoil'
 import {strState} from './State'
-
 import {Routes, Route, Outlet} from "react-router-dom";
-
 import Header from './Header'
 import Calculator from './Calculator'
 import Help from './Help'
@@ -31,8 +29,6 @@ function App() {
       <Help />
       <hr/>
       <About />
-      <hr/>
-      <Footer />
     </>
   )
 }
