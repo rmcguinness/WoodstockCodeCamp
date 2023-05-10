@@ -11,11 +11,20 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+import "./Header.css"
+import {Link}  from "react-router-dom";
 const Header = () => {
   return(
     <>
-      <h3>Navbar / Header</h3>
+      <h3>
+        <nav className="header">
+          <ul className="list">
+            <li><Link to="/">Calculator</Link></li>
+         <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/help">Help</Link></li>
+          </ul>
+        </nav>
+      </h3>
     </>
   )
 }
