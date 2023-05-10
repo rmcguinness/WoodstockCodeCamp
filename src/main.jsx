@@ -5,29 +5,15 @@ import About from './About.jsx'
 import Help from './Help.jsx'
 import './index.css'
 import { RecoilRoot } from 'recoil';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/About",
-    element: <About />,
-  },
-  {
-    path: "/Help",
-    element: <Help />
-  }
-]);
+import {BrowserRouter} from "react-router-dom";
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RecoilRoot>
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </RecoilRoot>
   </React.StrictMode>,
 )
