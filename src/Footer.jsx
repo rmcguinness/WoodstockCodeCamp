@@ -11,11 +11,25 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+import "./Footer.css"
+import {Link} from "react-router-dom";
 const Footer = () => {
   return(
     <>
-      <h3>Footer</h3>
+      <h3>
+        <footer>
+          <div>
+          <ul className="list">
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/help">Help</Link>
+            </li>
+          </ul></div>
+          <p>copyright (c)2023 Jabberbox</p>
+        </footer>
+      </h3>
     </>
   )
 }
