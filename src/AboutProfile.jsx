@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 import heatherAvatar from './images-about/IMG_2306.jpeg';
-import josilynAvatar from './images-about/crazyTrain.jpg';
+import josilynAvatar from './images-about/crazyTrain.jpeg';
 
 let bioObjs = [{
     id: 0,
@@ -25,10 +25,11 @@ let bioObjs = [{
   {
     id: 1,
     name: 'Josilyn McGuinness',
-    email: josilynAvatar,
-    avatar: "./images-about/crazyTrain.jpg",
+    email: 'josilyn@fallingonline.com',
+    avatar: josilynAvatar,
     bio: "I am flooding my desicated sponge of a brain with, what feels like, an onslot of technical information in hopes it will eventually soak it up, enabling me to become a proficient programmer ",
   },
+
 ]
 
 const AboutProfile = () => {
