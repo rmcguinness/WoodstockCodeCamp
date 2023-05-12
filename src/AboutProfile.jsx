@@ -13,6 +13,7 @@
 // limitations under the License.
 import heatherAvatar from './images-about/IMG_2306.jpeg';
 import josilynAvatar from './images-about/crazyTrain.jpeg';
+import codyAvatar from './images-about/cody.jpg';
 
 let bioObjs = [{
     id: 0,
@@ -29,6 +30,13 @@ let bioObjs = [{
     avatar: josilynAvatar,
     bio: "I am flooding my desicated sponge of a brain with, what feels like, an onslot of technical information in hopes it will eventually soak it up, enabling me to become a proficient programmer ",
   },
+  {
+    id: 2,
+    name: 'Cody Black',
+    email: 'cdblack86@gmail.com',
+    avatar: codyAvatar,
+    bio: 'Working through FreeCodeCamp with the goal of becoming a software engineer',
+  }
 
 ]
 
