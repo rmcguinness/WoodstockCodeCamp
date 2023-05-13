@@ -14,41 +14,51 @@
 import heatherAvatar from './images-about/IMG_2306.jpeg';
 import josilynAvatar from './images-about/crazyTrain.jpeg';
 import JenilleAvatar from './images-about/20221008_170821.jpg';
-let bioObjs = [{
-    id: 0,
-    name: 'Heather Jackson',
-    email: 'heather.jackson2003@gmail.com',
-    avatar: heatherAvatar,
-    bio: 'I am currently becoming a web-developer through Free Code Camp',
-  },
+import codyAvatar from './images-about/cody.jpg';
 
-  {
-    id: 1,
-    name: 'Josilyn McGuinness',
-    email: 'josilyn@fallingonline.com',
-    avatar: josilynAvatar,
-    bio: "I am flooding my desicated sponge of a brain with, what feels like, an onslot of technical information in hopes it will eventually soak it up, enabling me to become a proficient programmer ",
-  },
- { id: 2,
+let bioObjs = [{
+  id: 0,
+  name: 'Heather Jackson',
+  email: 'heather.jackson2003@gmail.com',
+  avatar: heatherAvatar,
+  bio: 'I am currently becoming a web-developer through Free Code Camp',
+},
+
+{
+  id: 1,
+  name: 'Josilyn McGuinness',
+  email: 'josilyn@fallingonline.com',
+  avatar: josilynAvatar,
+  bio: "I am flooding my desicated sponge of a brain with, what feels like, an onslot of technical information in hopes it will eventually soak it up, enabling me to become a proficient programmer ",
+},
+{
+  id: 2,
   name: 'Jenille Tulloch-Douglas',
   email: 'jenilletulloch@gmail.com',
   avatar: JenilleAvatar,
   bio: 'I am currently learning Web-Development through FreeCodeCamp Woodstock',
+},
+{
+  id: 3,
+  name: 'Cody Black',
+  email: 'cdblack86@gmail.com',
+  avatar: codyAvatar,
+  bio: 'Working through FreeCodeCamp with the goal of becoming a software engineer',
 }
 ]
 
 const AboutProfile = () => {
 
-  let arrayBioObjs = bioObjs.map(bioObj => 
+  let arrayBioObjs = bioObjs.map(bioObj =>
     <div key={bioObj.id}>
       <p>{bioObj.name}</p>
       <email>{bioObj.email}</email>
-      <img src={bioObj.avatar}/>
+      <img src={bioObj.avatar} />
       <p>{bioObj.bio}</p>
     </div>
   )
 
-  return(
+  return (
     <>
       {arrayBioObjs}
     </>
