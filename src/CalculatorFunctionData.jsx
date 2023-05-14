@@ -1,0 +1,20 @@
+export const functions = [
+  {action: "AC",
+  value: "AC",
+  id: "clear"},
+  {action: "*",
+    value: "*",
+    id: "multiply"},
+  {action: "/",
+    value: "/",
+    id: "divide"},
+  {action: "+",
+    value: "+",
+    id: "addition"},
+  {action: "-",
+    value: "-",
+    id: "subtract"},
+  {action: "=",
+    value: "=",
+    id: "equals"}
+];
