@@ -14,13 +14,13 @@
 
 import renderer from 'react-test-renderer';
 import App from '../App';
+import {BrowserRouter} from "react-router-dom";
 import { render, screen } from '@testing-library/react';
-import { getByText } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
 
 it('verify app page', () => {
   
-  const component = renderer.create(<RecoilRoot><App /></RecoilRoot>);
+  const component = renderer.create(<RecoilRoot><BrowserRouter><App /></BrowserRouter></RecoilRoot>);
   let tree = component.toJSON();
 
   // Verify the state of the application is valid on start
@@ -29,7 +29,7 @@ it('verify app page', () => {
 })
 
 it('verify header', () => {
-  const component = render(<RecoilRoot><App /></RecoilRoot>);
+  const component = render(<RecoilRoot><BrowserRouter><App /></BrowserRouter></RecoilRoot>);
 
   // Ensure that the text is rendered to the screen
   expect(screen.queryByText('Calculator Application')).toBeTruthy();

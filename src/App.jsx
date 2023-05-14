@@ -18,12 +18,6 @@ function App() {
           <Route path="/help" element={<Help />} />
         </Route>
       </Routes>
-
-      <Calculator />
-      <hr/>
-      <Help />
-      <hr/>
-      <About />
     </>
   )
 }
@@ -31,6 +25,7 @@ function Layout() {
   return (
     <div>
       <Header />
+      <h1>Calculator Application</h1>
       <hr />
       <Outlet />
       <Footer />
