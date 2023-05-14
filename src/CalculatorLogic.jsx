@@ -1,4 +1,4 @@
-import { evaluate, abs } from "mathjs"
+import { evaluate, abs } from 'mathjs';
 
 const isOperator = /[+-\/*]/;
 
@@ -19,12 +19,12 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
       setEquation('');
       setDisplay('0');
       break;
-    case 'pos-neg':
+    case 'pos_neg':
       setDisplay(changeSign(display, displayValue));
       break;
     case 'equals':
       setDisplay(calculate(equation));
-      setEquation("");
+      setEquation('');
       break;
   }
 };
