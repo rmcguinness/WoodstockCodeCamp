@@ -15,6 +15,7 @@ import heatherAvatar from './images-about/IMG_2306.jpeg';
 import josilynAvatar from './images-about/crazyTrain.jpeg';
 import JenilleAvatar from './images-about/20221008_170821.jpg';
 import codyAvatar from './images-about/cody.jpg';
+import zacAvatar from './images-about/zac-horton.jpg';
 
 let bioObjs = [{
   id: 0,
@@ -29,7 +30,7 @@ let bioObjs = [{
   name: 'Josilyn McGuinness',
   email: 'josilyn@fallingonline.com',
   avatar: josilynAvatar,
-  bio: "I am flooding my desicated sponge of a brain with, what feels like, an onslot of technical information in hopes it will eventually soak it up, enabling me to become a proficient programmer ",
+  bio: "I am flooding my desiccated sponge of a brain with, what feels like, an onslot of technical information in hopes it will eventually soak it up, enabling me to become a proficient programmer ",
 },
 {
   id: 2,
@@ -44,6 +45,13 @@ let bioObjs = [{
   email: 'cdblack86@gmail.com',
   avatar: codyAvatar,
   bio: 'Working through FreeCodeCamp with the goal of becoming a software engineer',
+},
+{
+  id: 4,
+  name: 'Zac Horton',
+  email: 'fullstackzac@gmail.com',
+  avatar: zacAvatar,
+  bio: 'Husband, father, and problem solver who is using the freeCodeCamp curriculum and other resources to become a full-stack web developer',
 }
 ]
 
