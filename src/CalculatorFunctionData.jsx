@@ -1,7 +1,10 @@
 export const functions = [
   {action: "AC",
-  value: "AC",
-  id: "clear"},
+    value: "AC",
+    id: "clear"},
+  {action: "+/-",
+    value: "+/-",
+    id: "pos/neg"},
   {action: "*",
     value: "*",
     id: "multiply"},

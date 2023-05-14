@@ -5,19 +5,22 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
     //check for and handle operator, AC, or "=" click
     switch (buttonObj.value) {
         case (isOperator):
-            pushOperator();
-            break;
+          pushOperator();
+          break;
         case ('AC'):
-            setEquation('');
-            setDisplay('0'); 
-            break;
+          setEquation('');
+          setDisplay('0'); 
+          break;
+        case ('+/-'):
+          changeSign();
+          break;
         case ('='):
-            calculate();
-            break;
+          calculate();
+          break;
     }
     //if multiple operators are entered sequentially, only use the last entered
     const pushOperator = () => {
-        if (operators.test(display.slice(-1))) {
+        if (isOperator.test(display.slice(-1))) {
             setEquation(equation.slice(0, -1) + buttonObj.value);
         } else {
             setEquation(equation + buttonObj.value);
@@ -38,33 +41,19 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
             setEquation("");
           }
     }
-    
-};
-
-export const handleNumClick = (buttonObj, display, setDisplay, equation, setEquation) => {
-    let isDigit = /\d/;
-    let isOperator = /[+-\/*]/;
-    let numStr = display;
-    let equationStr = equation;
-     //don't allow multiple beginning zeros
-    if(numStr[0] == 0 && numStr[1] != "." && isDigit.test(buttonObj.value)){
-        setEquation(buttonObj.value);
-        setDisplay(buttonObj.value);
-        return;
-     //don't allow more than one decimal per number
-    } else if (/\d || ./.test(equation) && !buttonObj.action){
-        if (buttonObj.value === "." && equation.includes(".")) {
-          return;
-        }else {
-          //display the new number after an operator
-          if (isOperator.test(equation.slice(-1)) && equation.slice(-1) != "."){
-            setDisplay(buttonObj.value);
-            equationStr = equationStr + buttonObj.value;
-            setEquation(equationStr);
-            return;
-          } else {
-          //display numbers if no operator was selected
-            }
+    //change the sign of the displayed number
+    const changeSign = () => {
+      let numStr = equation;
+      if (buttonObj.value === "+/-" && /\d/.test(display)){
+        if (display > 0) {
+          setDisplay(0 - display);
+          numStr = numStr.slice(0, (0 - display.toString.length - 1)) + display;
+          setEquation(numStr);
+        } else {
+          setDisplay(abs(display));
+          numStr = numStr.slice(0, -(display.length)) + display;
+          setEquation(numStr);
         }
     }
-}
+};
+
