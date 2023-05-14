@@ -12,11 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const CalculatorFunctionButton = () => {
+import { handleFunctions } from './CalculatorLogic.jsx';
+import { useRecoilState } from "recoil";
+import { displayState, equationState } from './State';
+
+const CalculatorFunctionButton = (props) => {
+  const [display, setDisplay] = useRecoilState(displayState);
+  const [equation, setEquation] = useRecoilState(equationState);
+  const o  = props.value;
+
+  const handleClick = () => {
+    handleFunctions(o.value, display, setDisplay, equation, setEquation)
+  }
+
   return(
-    <>
-      <h5>Calculator Function Button</h5>
-    </>
+      <button id={o.value}
+              onClick={() => handleClick()}>{o.value}</button>
   )
 }
 

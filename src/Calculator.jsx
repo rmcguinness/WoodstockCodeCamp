@@ -14,15 +14,21 @@
 
 import CalculatorDisplay from "./CalculatorDisplay";
 import CalculatorFunctionButton from "./CalculatorFunctionButton";
+import { functions } from "./CalculatorFunctionData";
 import CalculatorNumberButton from "./CalculatorNumberButton";
 
+
 const Calculator = () => {
+
+  const functionButtons = functions.map(o => <CalculatorFunctionButton obj={o}/>)
   return(
     <>
       <h3>Calculator</h3>
       <CalculatorDisplay />
       <CalculatorNumberButton />
-      <CalculatorFunctionButton />
+      <div id="functionButtons">
+        {functionButtons}
+      </div>
     </>
   )
 }
