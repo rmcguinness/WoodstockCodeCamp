@@ -19,10 +19,10 @@ import { displayState, equationState } from './State';
 const CalculatorFunctionButton = (props) => {
   const [display, setDisplay] = useRecoilState(displayState);
   const [equation, setEquation] = useRecoilState(equationState);
-  const o  = props.value;
+  const o  = props;
 
   const handleClick = () => {
-    handleFunctions(o.value, display, setDisplay, equation, setEquation)
+    handleFunctions(o, display, setDisplay, equation, setEquation)
   }
 
   return(

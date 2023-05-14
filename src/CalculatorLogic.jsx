@@ -1,59 +1,66 @@
 import { evaluate, abs } from "mathjs"
 
+const isOperator = /[+-\/*]/;
+
 export const handleFunctions = (buttonObj, display, setDisplay, equation, setEquation) => {
-    const isOperator = /[+-\/*]/;
-    //check for and handle operator, AC, or "=" click
-    switch (buttonObj.value) {
-        case (isOperator):
-          pushOperator();
-          break;
-        case ('AC'):
-          setEquation('');
-          setDisplay('0'); 
-          break;
-        case ('+/-'):
-          changeSign();
-          break;
-        case ('='):
-          calculate();
-          break;
+  const displayValue = buttonObj.displayValue;
+  const equationValue = buttonObj.equationValue;
+  const action = buttonObj.action;
+
+  //check for and handle operator, AC, or "=" click
+  switch (action) {
+    case 'multipy':
+    case 'divide':
+    case 'addtion':
+    case 'subtract':
+      setEquation(pushOperator(equation, equationValue, display));
+      break;
+    case 'clear':
+      setEquation('');
+      setDisplay('0');
+      break;
+    case 'pos-neg':
+      setDisplay(changeSign(display, displayValue));
+      break;
+    case 'equals':
+      setDisplay(calculate(equation));
+      setEquation("");
+      break;
+  }
+};
+/*If multiple operators are entered sequentially, only use the last entered.
+When an operator is entered, push the displayed numbers to the equation,
+along with the clicked operator. */
+const pushOperator = (equation, equationValue, display) => {
+  if (isOperator.test(equation.slice(-1))) {
+    return equation.slice(0, -1) + equationValue;
+  } else {
+    return equation + display + equationValue;
+  }
+};
+
+/*calculate the equation when "=" is clicked, 
+displaying ERROR if clicked multiple times or divide by zero*/
+const calculate = () => {
+  if (equation.slice(-1) == "=") {
+    return "ERROR";
+  }
+  let answer = evaluate(equation);
+  if (answer == Infinity) {
+    return "ERROR";
+  } else {
+    return answer;
+  }
+};
+
+//change the sign of the displayed number
+const changeSign = (displayValue) => {
+  if (displayValue === "+/-" && /\d/.test(display)) {
+    if (display > 0) {
+      return 0 - display;
+    } else {
+      return abs(display);
     }
-    //if multiple operators are entered sequentially, only use the last entered
-    const pushOperator = () => {
-        if (isOperator.test(display.slice(-1))) {
-            setEquation(equation.slice(0, -1) + buttonObj.value);
-        } else {
-            setEquation(equation + buttonObj.value);
-            //need to make display start over when next number is added
-        }
-    }
-    /*calculate the equation when "=" is clicked, 
-    displaying ERROR if clicked multiple times or divide by zero*/
-    const calculate = () => {
-        if (equation.slice(-1) == "="){
-            setDisplay("ERROR");
-        }
-        let answer = evaluate(equation);
-        if (answer == Infinity){
-            setDisplay("ERROR");
-          } else {
-            setDisplay(answer);  
-            setEquation("");
-          }
-    }
-    //change the sign of the displayed number
-    const changeSign = () => {
-      let numStr = equation;
-      if (buttonObj.value === "+/-" && /\d/.test(display)){
-        if (display > 0) {
-          setDisplay(0 - display);
-          numStr = numStr.slice(0, (0 - display.toString.length - 1)) + display;
-          setEquation(numStr);
-        } else {
-          setDisplay(abs(display));
-          numStr = numStr.slice(0, -(display.length)) + display;
-          setEquation(numStr);
-        }
-    }
+  }
 };
 
