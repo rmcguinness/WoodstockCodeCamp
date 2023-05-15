@@ -9,9 +9,9 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
 
   //check for and handle operator, AC, or "=" click
   switch (action) {
-    case 'multipy':
+    case 'multiply':
     case 'divide':
-    case 'addtion':
+    case 'addition':
     case 'subtract':
       setEquation(pushOperator(equation, equationValue, display));
       break;
@@ -53,14 +53,18 @@ const calculate = () => {
   }
 };
 
+//class InvalidInputError extends Error{}
+
 //change the sign of the displayed number
-const changeSign = (displayValue) => {
-  if (displayValue === "+/-" && /\d/.test(display)) {
-    if (display > 0) {
-      return 0 - display;
+export const changeSign = (display) => {
+  if (/\d/.test(display)) {
+    let num = parseFloat(display);
+    if (num > 0) {
+      return (0 - num).toString();
     } else {
-      return abs(display);
+      return abs(num).toString();
     }
   }
+  // throw new InvalidInputError('Invalid input');
 };
 
