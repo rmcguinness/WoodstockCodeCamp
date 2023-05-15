@@ -11,11 +11,14 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+import {useRecoilState} from 'recoil';
+import {displayState} from './State.jsx';
 
 const CalculatorDisplay = () => {
+  const [display] = useRecoilState(displayState);
   return(
     <>
-      <h5>Calculator Display</h5>
+      <span className="display">{display}</span>
     </>
   )
 }
