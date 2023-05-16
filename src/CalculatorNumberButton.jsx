@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from 'react'
 import { useRecoilState } from "recoil";
 import { displayState } from "./State";
@@ -23,33 +24,49 @@ const CalculatorNumberButton = () => {
   const [display, setDisplay] = useRecoilState(displayState);
   const [equation] = useRecoilState(equationState);
 
+  //renders with display = ''
+
   useEffect(() => {
     setDisplay('')
   }, [setDisplay]);
 
+
   const buttonClicked = (event) => {
+
+    // checks if function buttons have been clicked
 
     if (Object.keys(equation).length > 0) {
       setDisplay('');
     }
   
-    if ((display[0] === '0' && display[1] !== '.' && event.target.value !== '.') 
-      || (display.includes('.') && event.target.value === '.')) {
+    // changes 0 to next number clicked if 0 is not followed by .
+
+    else if (display[0] === '0' && display[1] !== '.' && event.target.value !== '.') {
+      return setDisplay(event.target.value);
+    }
+
+    // if display includes a . does not add another . when clicked
+
+    else if (display.includes('.') && event.target.value === '.') {
       return;
     }
-    
+
+    // if nothing above is catched then this adds the value of the clicked button to the display
+
     else {
       setDisplay(display + event.target.value);
-    }
-     
+    }   
   }
+
+  // map method that creates each button
   
   const numbersArrayMap = numbersArray.map((number) => {
     return <button value={number} onClick={buttonClicked} key={number}>{number}</button>
   })
   
   
-  
+  // redners on the page
+
   return (
     <>
       <h5>Calculator Number Button</h5>
