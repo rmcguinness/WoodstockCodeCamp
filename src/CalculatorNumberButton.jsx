@@ -12,26 +12,36 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { useRecoilState } from "recoil";
 import { displayState } from "./State";
-// import { equationState } from "./State";
+import { equationState } from "./State";
 
 const CalculatorNumberButton = () => {
 
   const numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '.'];
   const [display, setDisplay] = useRecoilState(displayState);
-  const [displayCopy, setDisplayCopy] = useState('')
-  
+  const [equation] = useRecoilState(equationState);
 
+  useEffect(() => {
+    setDisplay('')
+  }, [setDisplay]);
 
   const buttonClicked = (event) => {
-      
-      setDisplayCopy(displayCopy + event.target.value);
-      // if (Object.keys(equation).length > 0) {
-      //   setDisplay('');
-     // }
+
+    if (Object.keys(equation).length > 0) {
+      setDisplay('');
+    }
+  
+    if ((display[0] === '0' && display[1] !== '.' && event.target.value !== '.') 
+      || (display.includes('.') && event.target.value === '.')) {
+      return;
+    }
+    
+    else {
+      setDisplay(display + event.target.value);
+    }
+     
   }
   
   const numbersArrayMap = numbersArray.map((number) => {
@@ -44,7 +54,6 @@ const CalculatorNumberButton = () => {
     <>
       <h5>Calculator Number Button</h5>
       <div>{numbersArrayMap}</div>
-      <div>{displayCopy}</div>
       <div>{display}</div>
     </>
   )
