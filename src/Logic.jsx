@@ -19,3 +19,12 @@ export const VerifyNextInput = (display, toAppend) => {
     !toTest.includes('00') &&
     !toTest.includes('..');
 }
+
+export const INVALID_INPUT = "Invalid Input";
+
+export const Echo = (display) => {
+  if (display === null || display === undefined ||  display.trim().length == 0) {
+    throw INVALID_INPUT;
+  }
+  return display;
+}
