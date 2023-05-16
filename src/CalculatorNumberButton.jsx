@@ -65,7 +65,7 @@ const CalculatorNumberButton = () => {
   })
   
   
-  // redners on the page
+  // renders on the page
 
   return (
     <>
