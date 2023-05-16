@@ -12,12 +12,42 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react'
+import { useRecoilState } from "recoil";
+import { displayState } from "./State";
+// import { equationState } from "./State";
+
 const CalculatorNumberButton = () => {
-  return(
+
+  const numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '.'];
+  const [display, setDisplay] = useRecoilState(displayState);
+  const [displayCopy, setDisplayCopy] = useState('')
+  
+
+
+  const buttonClicked = (event) => {
+      
+      setDisplayCopy(displayCopy + event.target.value);
+      // if (Object.keys(equation).length > 0) {
+      //   setDisplay('');
+     // }
+  }
+  
+  const numbersArrayMap = numbersArray.map((number) => {
+    return <button value={number} onClick={buttonClicked} key={number}>{number}</button>
+  })
+  
+  
+  
+  return (
     <>
       <h5>Calculator Number Button</h5>
+      <div>{numbersArrayMap}</div>
+      <div>{displayCopy}</div>
+      <div>{display}</div>
     </>
   )
 }
 
-export default CalculatorNumberButton;
+export default CalculatorNumberButton
