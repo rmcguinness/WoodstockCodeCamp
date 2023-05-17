@@ -28,7 +28,7 @@ const CalculatorFunctionButton = (props) => {
 
   return(
       <button id={o.value}
-              onClick={() => handleClick()}>{o.value}</button>
+              onClick={() => handleClick()}>{o.displayValue}</button>
   )
 }
 
