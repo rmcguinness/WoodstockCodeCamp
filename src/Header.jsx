@@ -16,15 +16,14 @@ import {Link}  from "react-router-dom";
 const Header = () => {
   return(
     <>
-      <h3>
+      
         <nav className="header">
           <ul className="list">
-            <li><Link to="/">Calculator</Link></li>
-         <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/help">Help</Link></li>
+            <li className="flex-child"><Link to="/">Calculator</Link></li>
+            <li className="flex-child"><Link to="/about">About Us</Link></li>
+            <li className="flex-child"><Link to="/help">Help</Link></li>
           </ul>
         </nav>
-      </h3>
     </>
   )
 }

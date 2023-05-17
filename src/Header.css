@@ -19,9 +19,15 @@
     position:left;
     margin:0;
     padding:0;
-}
-.header{
     display:flex;
-    background-color:light grey;
-    align-items:center;
+    justify-content: flex-end;
+}
+li{
+    font-size:25px;
+    padding: 15px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

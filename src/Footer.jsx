@@ -16,7 +16,7 @@ import {Link} from "react-router-dom";
 const Footer = () => {
   return(
     <>
-      <h3>
+      
         <footer>
           <div>
           <ul className="list">
@@ -26,10 +26,11 @@ const Footer = () => {
             <li>
               <Link to="/help">Help</Link>
             </li>
-          </ul></div>
-          <p>copyright (c)2023 Jabberbox</p>
+          </ul>
+          </div>
+          <p className="copyright">copyright (c)2023 Jabberbox</p>
         </footer>
-      </h3>
+      
     </>
   )
 }
