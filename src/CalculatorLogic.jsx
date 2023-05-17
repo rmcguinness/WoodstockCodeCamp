@@ -1,8 +1,8 @@
 import { evaluate, abs } from 'mathjs';
 
-const isOperator = /[+-\/*]/;
+//const isOperator = /[+-\/*]/;
 
-export const handleFunctions = (buttonObj, display, setDisplay, equation, setEquation) => {
+export const handleFunctions = (buttonObj, display, setDisplay, equation, setEquation, lastClickedOperator) => {
   const displayValue = buttonObj.displayValue;
   const equationValue = buttonObj.equationValue;
   const action = buttonObj.action;
@@ -13,38 +13,38 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
     case 'divide':
     case 'addition':
     case 'subtract':
-      setEquation(pushOperator(equation, equationValue, display));
+      setEquation(pushOperator(equation, equationValue, display, lastClickedOperator));
       break;
     case 'clear':
-      setEquation('');
+      setEquation('0');
       setDisplay('0');
+      lastClickedOperator = 'false';
       break;
     case 'pos_neg':
-      setDisplay(changeSign(display, displayValue));
+      setDisplay(changeSign(display, displayValue, lastClickedOperator));
       break;
     case 'equals':
-      setDisplay(calculate(equation));
-      setEquation('');
+      setDisplay(calculate(equation, lastClickedOperator));
+      setEquation('0');
       break;
   }
 };
 /*If multiple operators are entered sequentially, only use the last entered.
 When an operator is entered, push the displayed numbers to the equation,
 along with the clicked operator. */
-const pushOperator = (equation, equationValue, display) => {
-  if (isOperator.test(equation.slice(-1))) {
+export const pushOperator = (equation, equationValue, display, lastClickedOperator) => {
+  if (lastClickedOperator) {
     return equation.slice(0, -1) + equationValue;
   } else {
+    lastClickedOperator = 'true';   //change operator click to true to track last clicked was an operator
     return equation + display + equationValue;
   }
 };
 
 /*calculate the equation when "=" is clicked, 
 displaying ERROR if clicked multiple times or divide by zero*/
-const calculate = () => {
-  if (equation.slice(-1) == "=") {
-    return "ERROR";
-  }
+export const calculate = (equation, lastClickedOperator) => {
+  lastClickedOperator = 'false';  //track operator click
   let answer = evaluate(equation);
   if (answer == Infinity) {
     return "ERROR";
@@ -53,18 +53,16 @@ const calculate = () => {
   }
 };
 
-//class InvalidInputError extends Error{}
-
 //change the sign of the displayed number
-export const changeSign = (display) => {
+export const changeSign = (display, lastClickedOperator) => {
   if (/\d/.test(display)) {
-    let num = parseFloat(display);
+    lastClickedOperator = 'false';  //track operator click
+    let num = parseFloat(display);  //change string to float
     if (num > 0) {
       return (0 - num).toString();
     } else {
       return abs(num).toString();
     }
   }
-  // throw new InvalidInputError('Invalid input');
 };
 

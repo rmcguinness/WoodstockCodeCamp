@@ -20,12 +20,14 @@ import CalculatorNumberButton from "./CalculatorNumberButton";
 
 const Calculator = () => {
 
-  const functionButtons = functions.map(o => <CalculatorFunctionButton obj={o}/>)
+  let lastClickedOperator = false;
+  const functionButtons = functions.map(o => <CalculatorFunctionButton key={o.id} obj={o} 
+                          lastClickedOperator={lastClickedOperator}/>)
   return(
     <>
       <h3>Calculator</h3>
       <CalculatorDisplay />
-      <CalculatorNumberButton />
+      <CalculatorNumberButton lastClickedOperator={lastClickedOperator}/>
       <div id="functionButtons">
         {functionButtons}
       </div>
