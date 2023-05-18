@@ -8,5 +8,5 @@ export const displayState = atom ({
 //for equation to be evaluated
 export const equationState = atom({
     key: 'equation',
-    default: '0',
+    default: '',
 });
