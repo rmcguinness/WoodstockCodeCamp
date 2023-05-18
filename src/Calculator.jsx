@@ -16,6 +16,7 @@ import CalculatorDisplay from "./CalculatorDisplay";
 import CalculatorFunctionButton from "./CalculatorFunctionButton";
 import { functions } from "./CalculatorFunctionData";
 import CalculatorNumberButton from "./CalculatorNumberButton";
+import './Calculator.css'
 
 
 const Calculator = () => {
@@ -26,6 +27,41 @@ const Calculator = () => {
   return(
     <>
       <h3>Calculator</h3>
+
+    
+    <div className = "calculator-gui">
+      <div className = "calculator-head"></div>
+      <div className = "calculator-button-row-1">
+        <div className = "calculator-button"><p id="first-button">AC</p></div>
+        <div className = "calculator-button"><p>+/-</p></div>
+        <div className = "calculator-button"><p>÷</p></div>
+      </div>
+      <div className = "calculator-button-row-2">
+        <div className = "calculator-button"><p>7</p></div>
+        <div className = "calculator-button"><p>8</p></div>
+        <div className = "calculator-button"><p>9</p></div>
+        <div className = "calculator-button"><p>X</p></div>
+      </div>
+      <div className = "calculator-button-row-3">
+        <div className = "calculator-button"><p>4</p></div>
+        <div className = "calculator-button"><p>5</p></div>
+        <div className = "calculator-button"><p>6</p></div>
+        <div className = "calculator-button"><p>-</p></div>
+      </div>
+      <div className = "calculator-button-row-4">
+        <div className = "calculator-button"><p>1</p></div>
+        <div className = "calculator-button"><p>2</p></div>
+        <div className = "calculator-button"><p>3</p></div>
+        <div className = "calculator-button"><p>+</p></div>
+      </div>        
+      <div className = "calculator-button-row-5">
+        <div className = "calculator-button"><p>0</p></div>
+        <div className = "calculator-button"><p>.</p></div>
+        <div className = "calculator-button"><p>=</p></div>
+      </div>  
+    </div>
+
+
       <CalculatorDisplay />
       <CalculatorNumberButton lastClickedOperator={lastClickedOperator}/>
       <div id="functionButtons">
