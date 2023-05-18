@@ -24,7 +24,7 @@ export const functions = [
     equationValue: "-",
     id: "subtract"},
   {action: "equals",
-    diplayValue: "=",
+    displayValue: "=",
     equationValue: "=",
     id: "equals"}
 ];

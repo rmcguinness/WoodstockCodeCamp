@@ -16,16 +16,16 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
       setEquation(pushOperator(equation, equationValue, display, lastClickedOperator));
       break;
     case 'clear':
-      setEquation('0');
+      setEquation('');
       setDisplay('0');
-      lastClickedOperator = 'false';
+      lastClickedOperator = false;
       break;
     case 'pos_neg':
       setDisplay(changeSign(display, displayValue, lastClickedOperator));
       break;
     case 'equals':
-      setDisplay(calculate(equation, lastClickedOperator));
-      setEquation('0');
+      setDisplay(calculate(equation, display, lastClickedOperator));
+      setEquation('');
       break;
   }
 };
@@ -33,20 +33,24 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
 When an operator is entered, push the displayed numbers to the equation,
 along with the clicked operator. */
 export const pushOperator = (equation, equationValue, display, lastClickedOperator) => {
-  if (lastClickedOperator) {
+  if (lastClickedOperator === true) {
     return equation.slice(0, -1) + equationValue;
   } else {
-    lastClickedOperator = 'true';   //change operator click to true to track last clicked was an operator
+    lastClickedOperator = true;   //change operator click to true to track last clicked was an operator
     return equation + display + equationValue;
   }
 };
 
 /*calculate the equation when "=" is clicked, 
 displaying ERROR if clicked multiple times or divide by zero*/
-export const calculate = (equation, lastClickedOperator) => {
-  lastClickedOperator = 'false';  //track operator click
-  let answer = evaluate(equation);
-  if (answer == Infinity) {
+export const calculate = (equation, display, lastClickedOperator) => {
+  
+  lastClickedOperator = false;  //track operator click
+  const completeEquation = equation + display;
+  console.log(completeEquation);
+  const answer = evaluate(completeEquation);
+  
+  if (answer === Infinity) {
     return "ERROR";
   } else {
     return answer;
@@ -56,7 +60,7 @@ export const calculate = (equation, lastClickedOperator) => {
 //change the sign of the displayed number
 export const changeSign = (display, lastClickedOperator) => {
   if (/\d/.test(display)) {
-    lastClickedOperator = 'false';  //track operator click
+    lastClickedOperator = false;  //track operator click
     let num = parseFloat(display);  //change string to float
     if (num > 0) {
       return (0 - num).toString();
