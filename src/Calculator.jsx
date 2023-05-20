@@ -14,8 +14,9 @@
 
 import CalculatorDisplay from "./CalculatorDisplay";
 import CalculatorFunctionButton from "./CalculatorFunctionButton";
-import { functions } from "./CalculatorFunctionData";
 import CalculatorNumberButton from "./CalculatorNumberButton";
+import { functions } from "./CalculatorFunctionData";
+import { buttons } from "./CalculatorNumberData"
 
 
 const Calculator = () => {
@@ -23,11 +24,15 @@ const Calculator = () => {
   let lastClickedOperator = false;
   const functionButtons = functions.map(o => <CalculatorFunctionButton key={o.id} obj={o} 
                           lastClickedOperator={lastClickedOperator}/>)
+  const numberButtons = buttons.map(num => <CalculatorNumberButton key={num.val} obj={num}
+    lastClickedOperator={lastClickedOperator}/>)
   return(
     <>
       <h3>Calculator</h3>
       <CalculatorDisplay />
-      <CalculatorNumberButton lastClickedOperator={lastClickedOperator}/>
+      <div id="numberButtons">
+        {numberButtons}
+      </div>
       <div id="functionButtons">
         {functionButtons}
       </div>

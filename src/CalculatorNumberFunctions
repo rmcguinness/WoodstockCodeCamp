@@ -1,0 +1,15 @@
+export const handleNumberClick = (num, display, setDisplay) => {
+  if (display === '0') {
+    setDisplay(num.val)
+  } else {
+    setDisplay(display + num.val)
+  }
+}
+
+// export const handleDotClick = (num, display, setDisplay) => {
+//   if (!display.includes(num)) { 
+//     setDisplay(display + num)
+//   }
+// }
+
+
