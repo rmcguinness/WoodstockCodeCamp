@@ -21,9 +21,11 @@ import { buttons } from "./CalculatorNumberData"
 
 const Calculator = () => {
 
-  let lastClickedOperator = false;
+  let lastClickedOperator =   false;
+  
   const functionButtons = functions.map(o => <CalculatorFunctionButton key={o.id} obj={o} 
                           lastClickedOperator={lastClickedOperator}/>)
+                          
   const numberButtons = buttons.map(num => <CalculatorNumberButton key={num.val} obj={num}
     lastClickedOperator={lastClickedOperator}/>)
   return(
