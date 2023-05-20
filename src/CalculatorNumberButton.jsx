@@ -20,9 +20,11 @@ import { handleClick } from './CalculatorNumberFunctions'
 const CalculatorNumberButton = (props) => {
   const [display, setDisplay] = useRecoilState(displayState);
   let num = props.obj;
+  let lastClickedOperator = props.lastClickedOperator;
+  
 
   const handleClicked = () => {
-    handleClick(num, display, setDisplay)
+    handleClick(num, display, setDisplay, lastClickedOperator)
   }
 
 

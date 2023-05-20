@@ -1,7 +1,14 @@
-export const handleClick = (num, display, setDisplay) => {
+export const handleClick = (num, display, setDisplay, lastClickedOperator) => {
+
+  if (lastClickedOperator === true) {
+    setDisplay(num.val);
+    lastClickedOperator = false
+  }
+
   if (num.func === 'handleNumberClick') {
     handleNumberClick(num, display, setDisplay);
   }
+
   else {
     handleDotClick(num, display, setDisplay);
   }
