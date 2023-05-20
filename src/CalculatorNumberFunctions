@@ -3,7 +3,7 @@ export const handleClick = (num, display, setDisplay) => {
     handleNumberClick(num, display, setDisplay);
   }
   else {
-    return handleDotClick(num, display, setDisplay);
+    handleDotClick(num, display, setDisplay);
   }
 
 }
