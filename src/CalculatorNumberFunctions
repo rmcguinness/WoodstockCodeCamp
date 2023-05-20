@@ -1,4 +1,14 @@
-export const handleNumberClick = (num, display, setDisplay) => {
+export const handleClick = (num, display, setDisplay) => {
+  if (num.func === 'handleNumberClick') {
+    handleNumberClick(num, display, setDisplay);
+  }
+  else {
+    return handleDotClick(num, display, setDisplay);
+  }
+
+}
+
+const handleNumberClick = (num, display, setDisplay) => {
   if (display === '0') {
     setDisplay(num.val)
   } else {
@@ -6,10 +16,13 @@ export const handleNumberClick = (num, display, setDisplay) => {
   }
 }
 
-// export const handleDotClick = (num, display, setDisplay) => {
-//   if (!display.includes(num)) { 
-//     setDisplay(display + num)
-//   }
-// }
+const handleDotClick = (num, display, setDisplay) => {
+  if (!display.includes(num.val)) { 
+    setDisplay(display + num.val)
+  }
+}
+
+
+
 
 

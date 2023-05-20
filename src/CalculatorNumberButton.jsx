@@ -15,21 +15,19 @@
 
 import { useRecoilState } from "recoil";
 import { displayState } from "./State";
-import { handleNumberClick } from './CalculatorNumberFunctions'
-
-
+import { handleClick } from './CalculatorNumberFunctions'
 
 const CalculatorNumberButton = (props) => {
   const [display, setDisplay] = useRecoilState(displayState);
   let num = props.obj;
 
-  const handleNumberClicks = () => {
-    handleNumberClick(num, display, setDisplay)
+  const handleClicked = () => {
+    handleClick(num, display, setDisplay)
   }
 
 
   return (
-      <button id={num.val} onClick={() => handleNumberClicks()}>{num.val}</button>
+      <button id={num.val} onClick={() => handleClicked()}>{num.val}</button>
   )
 }
 
