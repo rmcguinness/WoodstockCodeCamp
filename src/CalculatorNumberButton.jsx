@@ -27,7 +27,6 @@ const CalculatorNumberButton = (props) => {
     handleClick(num, display, setDisplay, lastClickedOperator)
   }
 
-
   return (
       <button id={num.val} onClick={() => handleClicked()}>{num.val}</button>
   )

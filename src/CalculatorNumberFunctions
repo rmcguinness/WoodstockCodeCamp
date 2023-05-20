@@ -1,12 +1,7 @@
 export const handleClick = (num, display, setDisplay, lastClickedOperator) => {
 
-  if (lastClickedOperator === true) {
-    setDisplay(num.val);
-    lastClickedOperator = false
-  }
-
   if (num.func === 'handleNumberClick') {
-    handleNumberClick(num, display, setDisplay);
+    handleNumberClick(num, display, setDisplay, lastClickedOperator);
   }
 
   else {
@@ -15,9 +10,11 @@ export const handleClick = (num, display, setDisplay, lastClickedOperator) => {
 
 }
 
-const handleNumberClick = (num, display, setDisplay) => {
-  if (display === '0') {
+const handleNumberClick = (num, display, setDisplay, lastClickedOperator) => {
+  if (display === '0' || lastClickedOperator === true) {
     setDisplay(num.val)
+    lastClickedOperator = false
+
   } else {
     setDisplay(display + num.val)
   }
