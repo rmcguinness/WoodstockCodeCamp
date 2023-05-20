@@ -13,12 +13,13 @@
 // limitations under the License.
 import {useRecoilState} from 'recoil';
 import {displayState} from './State.jsx';
+import './CalculatorDisplay.css';
 
 const CalculatorDisplay = () => {
   const [display] = useRecoilState(displayState);
   return(
     <>
-      <span className="display">{display}</span>
+      <span className="output">{display}</span>
     </>
   )
 }
