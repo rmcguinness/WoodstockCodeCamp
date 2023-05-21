@@ -12,13 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
-/**Styling updates: 
+/**Styling updates:
  * Imported styled components for easier readability
  * Wrapped bio-section in grid display
  * Paragraph component uses height and width to keep rows aligned
  * bio-wrapper div centers and aligns information
  * media query for bio section to switch to column display on mobile
+ * **To-Do**
+ * Possible add title/role to go under Name for each developer
  */
 import heatherAvatar from './images-about/IMG_2306.jpeg';
 import josilynAvatar from './images-about/crazyTrain.jpeg';
@@ -26,7 +27,8 @@ import JenilleAvatar from './images-about/20221008_170821.jpg';
 import codyAvatar from './images-about/cody.jpg';
 import zacAvatar from './images-about/zac-horton.jpg';
 import styled from 'styled-components';
-import { Profile, Paragraph, Email, Name } from '../style';
+import { AiOutlineMail } from 'react-icons/ai';
+import { Profile, Paragraph, Email, Name} from '../style';
 
 let bioObjs = [
   {
@@ -70,18 +72,26 @@ let bioObjs = [
 const AboutProfile = () => {
   let arrayBioObjs = bioObjs.map((bioObj) => (
     <div key={bioObj.id}>
-      <div className="bio-wrapper">
+      <Profile>
         <Name>{bioObj.name}</Name>
-      <img src={bioObj.avatar} />
-        <email>{bioObj.email}</email>
+        
+        <img src={bioObj.avatar} />
+        <Email>
+          <AiOutlineMail className="email-icon" />
+          <email>{bioObj.email}</email>
+          </Email>
         <Paragraph>
           <p>{bioObj.bio}</p>
-          </Paragraph>
-        </div>
+        </Paragraph>
+      </Profile>
     </div>
   ));
 
-  return <><div className="profile-wrap">{arrayBioObjs}</div></>;
+  return (
+    <>
+      <div className="profile-wrap">{arrayBioObjs}</div>
+    </>
+  );
 };
 
 export default AboutProfile;
