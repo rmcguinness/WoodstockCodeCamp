@@ -1,76 +1,87 @@
 // Copyright 2023 Ryan McGuinness
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+
+/**Styling updates: 
+ * Imported styled components for easier readability
+ * Wrapped bio-section in grid display
+ * Paragraph component uses height and width to keep rows aligned
+ * bio-wrapper div centers and aligns information
+ * media query for bio section to switch to column display on mobile
+ */
 import heatherAvatar from './images-about/IMG_2306.jpeg';
 import josilynAvatar from './images-about/crazyTrain.jpeg';
 import JenilleAvatar from './images-about/20221008_170821.jpg';
 import codyAvatar from './images-about/cody.jpg';
 import zacAvatar from './images-about/zac-horton.jpg';
+import styled from 'styled-components';
+import { Profile, Paragraph, Email, Name } from '../style';
 
-let bioObjs = [{
-  id: 0,
-  name: 'Heather Jackson',
-  email: 'heather.jackson2003@gmail.com',
-  avatar: heatherAvatar,
-  bio: 'I am currently becoming a web-developer through Free Code Camp',
-},
+let bioObjs = [
+  {
+    id: 0,
+    name: 'Heather Jackson',
+    email: 'heather.jackson2003@gmail.com',
+    avatar: heatherAvatar,
+    bio: 'I am currently becoming a web-developer through Free Code Camp',
+  },
 
-{
-  id: 1,
-  name: 'Josilyn McGuinness',
-  email: 'josilyn@fallingonline.com',
-  avatar: josilynAvatar,
-  bio: "I am flooding my desiccated sponge of a brain with, what feels like, an onslot of technical information in hopes it will eventually soak it up, enabling me to become a proficient programmer ",
-},
-{
-  id: 2,
-  name: 'Jenille Tulloch-Douglas',
-  email: 'jenilletulloch@gmail.com',
-  avatar: JenilleAvatar,
-  bio: 'I am currently learning Web-Development through FreeCodeCamp Woodstock',
-},
-{
-  id: 3,
-  name: 'Cody Black',
-  email: 'cdblack86@gmail.com',
-  avatar: codyAvatar,
-  bio: 'Working through FreeCodeCamp with the goal of becoming a software engineer',
-},
-{
-  id: 4,
-  name: 'Zac Horton',
-  email: 'fullstackzac@gmail.com',
-  avatar: zacAvatar,
-  bio: 'Husband, father, and problem solver who is using the freeCodeCamp curriculum and other resources to become a full-stack web developer',
-}
-]
+  {
+    id: 1,
+    name: 'Josilyn McGuinness',
+    email: 'josilyn@fallingonline.com',
+    avatar: josilynAvatar,
+    bio: 'I am flooding my desiccated sponge of a brain with, what feels like, an onslot of technical information in hopes it will eventually soak it up, enabling me to become a proficient programmer ',
+  },
+  {
+    id: 2,
+    name: 'Jenille Tulloch-Douglas',
+    email: 'jenilletulloch@gmail.com',
+    avatar: JenilleAvatar,
+    bio: 'I am currently learning Web-Development through FreeCodeCamp Woodstock',
+  },
+  {
+    id: 3,
+    name: 'Cody Black',
+    email: 'cdblack86@gmail.com',
+    avatar: codyAvatar,
+    bio: 'Working through FreeCodeCamp with the goal of becoming a software engineer',
+  },
+  {
+    id: 4,
+    name: 'Zac Horton',
+    email: 'fullstackzac@gmail.com',
+    avatar: zacAvatar,
+    bio: 'Husband, father, and problem solver who is using the freeCodeCamp curriculum and other resources to become a full-stack web developer',
+  },
+];
 
 const AboutProfile = () => {
-
-  let arrayBioObjs = bioObjs.map(bioObj =>
+  let arrayBioObjs = bioObjs.map((bioObj) => (
     <div key={bioObj.id}>
-      <p>{bioObj.name}</p>
-      <email>{bioObj.email}</email>
+      <div className="bio-wrapper">
+        <Name>{bioObj.name}</Name>
       <img src={bioObj.avatar} />
-      <p>{bioObj.bio}</p>
+        <email>{bioObj.email}</email>
+        <Paragraph>
+          <p>{bioObj.bio}</p>
+          </Paragraph>
+        </div>
     </div>
-  )
+  ));
 
-  return (
-    <>
-      {arrayBioObjs}
-    </>
-  );
-}
+  return <><div className="profile-wrap">{arrayBioObjs}</div></>;
+};
 
 export default AboutProfile;
