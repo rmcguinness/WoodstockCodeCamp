@@ -13,6 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
  :root {
   --alt-color: #0d6efd;
 }
@@ -21,21 +24,67 @@ img {
   display: block;
   width: 200px;
   height: 200px;
+  object-fit: cover;
+
+  
+  @media (max-width: 780px) {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    max-width: 300px;
+  height: 350px;
+  object-fit: cover;
+  }
 }
 .profile-wrap{
-  margin-top: 100px;
+  padding: 40px;
+  margin: 40px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   justify-content: center;
   align-items: center;
   
+  font-family: 'Raleway', sans-serif;
   @media (max-width: 780px) {
-    display: flex;
-    flex-direction: column
+    
   }
 }
 
 
 .email-icon{
   margin-right: 4px;
+}
+.about-header{
+  display: flex;
+  justify-content: center;
+}
+.about-wrapper{
+  background-color: #0d6efd29;
+    padding: 40px;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    
+}
+.about-wrapper h3{
+  font-size: 3em;
+}
+.about-wrapper p{
+  float: right;
+  position: relative;
+  top: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+.about-container header .about-caption{
+  margin-left: 1.5px;
+  font-weight: 400;
+}
+
+@media (max-width: 780px) {
+  .profile-wrap{
+    display: flex;
+    flex-direction: column;
+  }
+  
 }
