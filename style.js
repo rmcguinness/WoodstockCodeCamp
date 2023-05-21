@@ -8,6 +8,7 @@ export const Name = styled.h5`
 
 export const Paragraph = styled.div`
   margin-top: 10px;
+  margin-bottom: 10px;
   height: 100px;
   width: 190px;
   line-height: 1;
@@ -21,6 +22,10 @@ export const Email = styled.div`
   font-weight: 600;
   padding: 4px;
   border-radius: 4px;
+  width: auto;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `;
 
 export const Profile = styled.div`

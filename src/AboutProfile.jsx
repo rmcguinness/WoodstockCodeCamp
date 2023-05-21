@@ -20,12 +20,17 @@
  * media query for bio section to switch to column display on mobile
  * **To-Do**
  * Possible add title/role to go under Name for each developer
+ * Import AnimatePresence API for image rendering
+ * Copy email to clipboard/email redirect on click
+ * Add mini-tabs for different technologies for each developer
  */
 import heatherAvatar from './images-about/IMG_2306.jpeg';
 import josilynAvatar from './images-about/crazyTrain.jpeg';
 import JenilleAvatar from './images-about/20221008_170821.jpg';
 import codyAvatar from './images-about/cody.jpg';
 import zacAvatar from './images-about/zac-horton.jpg';
+import jordanAvatar from './images-about/jordan-daniel.jpg'
+
 import styled from 'styled-components';
 import { AiOutlineMail } from 'react-icons/ai';
 import { Profile, Paragraph, Email, Name} from '../style';
@@ -66,6 +71,13 @@ let bioObjs = [
     email: 'fullstackzac@gmail.com',
     avatar: zacAvatar,
     bio: 'Husband, father, and problem solver who is using the freeCodeCamp curriculum and other resources to become a full-stack web developer',
+  },
+  {
+    id: 5,
+    name: 'Jordan Daniel',
+    email: 'jjosephd804@gmail.com',
+    avatar: jordanAvatar,
+    bio: 'Jr. Software Engineer experienced in using technologies such as HTML, CSS, JS, React, TailwindCSS, Node',
   },
 ];
 
