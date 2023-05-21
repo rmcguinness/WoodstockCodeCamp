@@ -19,3 +19,27 @@ img {
   width: 200px;
   height: 200px;
 }
+.profile-wrap{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: center;
+  align-items: center;
+  
+  @media (max-width: 780px) {
+    display: flex;
+    flex-direction: column
+  }
+}
+
+.bio-wrapper{
+  max-width: 210px;
+  margin: auto;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
