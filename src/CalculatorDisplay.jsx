@@ -17,6 +17,7 @@ import './CalculatorDisplay.css';
 
 const CalculatorDisplay = () => {
   const [display] = useRecoilState(displayState);
+
   return(
     <>
       <span className="output">{display}</span>

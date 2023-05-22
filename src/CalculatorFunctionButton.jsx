@@ -20,10 +20,9 @@ const CalculatorFunctionButton = (props) => {
   const [display, setDisplay] = useRecoilState(displayState);
   const [equation, setEquation] = useRecoilState(equationState);
   const o  = props.obj;
-  let lastClickedOperator = props.lastClickedOperator;
 
   const handleClick = () => {
-    handleFunctions(o, display, setDisplay, equation, setEquation, lastClickedOperator)
+    handleFunctions(o, display, setDisplay, equation, setEquation)
   }
 
   return(

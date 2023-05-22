@@ -14,17 +14,18 @@
 
 
 import { useRecoilState } from "recoil";
-import { displayState } from "./State";
+import { displayState, equationState } from "./State";
 import { handleClick } from './CalculatorNumberFunctions'
 
 const CalculatorNumberButton = (props) => {
   const [display, setDisplay] = useRecoilState(displayState);
+  const [equation, setEquation] = useRecoilState(equationState);
   let num = props.obj;
-  let lastClickedOperator = props.lastClickedOperator;
+ 
   
 
   const handleClicked = () => {
-    handleClick(num, display, setDisplay, lastClickedOperator)
+    handleClick(num, display, setDisplay, equation, setEquation)
   }
 
   return (
