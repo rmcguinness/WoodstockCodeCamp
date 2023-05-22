@@ -14,104 +14,88 @@
  * limitations under the License.
  */
 
-
 .calculator-gui {
-  /* position: absolute;
-  right: 50%; */
   width: 250px;
-  height: 500px;
-  background-color: #2b343c;
-  border-radius: 10px;
+  height: 550px;
+  background-color: #1a1c1f;
   margin: auto;
+  border-radius: 5px;
 }
 
-.calculator-head {
-  /* position: relative; */
-  /* top: 10px; */
-  width: 90%;
-  height: 40%;
-  background-color: #757575;
-  /* margin: auto; */
+.calculator-display {
+  position: relative;
+  width: 95%;
+  height: 35%;
+  background-color: #2b343c;
   margin: auto;
-  border-radius: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  top: 15px;
 }
+
+.calculator-buttons {
+  position: relative;
+  top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.calculator-button {
+  width: 50px;
+  height: 50px;
+  background-color: #23262a;
+  border-radius: 50%;
+  flex-grow: 1;
+  margin: 0 .25em .5em .25em;
+}
+
+.calculator-button > p {
+  color: white;
+  font-size: large;
+  text-align: center;
+  line-height: 3;
+}
+
+.function {
+  background-color: #394857;
+}
+
 
 .calculator-button-row-1 {
   display: flex;
   justify-content: flex-end;
-  /* margin-right: 10px; */
-
-}
-
-.calculator-button-row-2 {
-  /* position: relative; */
-  display: flex;
-  justify-content: flex-end;
-  /* top: 20px; */
-}
-
-.calculator-button-row-3 {
-  /* position: relative; */
-  display: flex;
-  justify-content: flex-end;
-  /* top: 20px; */
-}
-
-.calculator-button-row-4 {
-  /* position: relative; */
-  display: flex;
-  justify-content: flex-end;
-  /* top: 20px; */
-}
-
-.calculator-button-row-5 {
-  /* position: relative; */
-  display: flex;
-  justify-content: flex-end;
-  /* top: 20px; */
-}
-
-.calculator-button {
-
-  /* top: 30px; */
-  /* padding: 30px; */
-  width: 50px;
-  height: 50px;
-  background-color: grey;
-  border-radius: 50%;
-  /* margin: 5px; */
-  margin-bottom: 1em;
-  margin-right: .5em;
-  /* display: flex; */
-}
-
-.calculator-button > p {
-  position: relative;
-  /* display: block; */
-  color: white;
-  top: 15px;
-  left: 15px;
-  font-size: large;
-  /* width: 100%; */
-  /* height: 100%; */
 }
 
 .calculator-button-row-1 > .calculator-button:first-child {
-  /* position: relative; */
-  /* display: block; */
-  /* top: 15px;
-  left: 5px; */
-  /* width: 100%; */
-  /* position: relative;
-  top: 0;
-  left: 0; */
-  background-color: purple;
-  width: 100px;
-  height: 50px;
+  background-color: #4e4062;
+  width: 110px;
+  border-radius: 45%;
 }
 
-#first-button {
-  color: white;
+.calculator-button-row-2 {
   position: relative;
-  left: 37px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calculator-button-row-3 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calculator-button-row-4 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calculator-button-row-5 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calculator-button-row-5 > .calculator-button:last-child {
+  background-color: #054b72;
+  width: 110px;
+  border-radius: 45%;
 }
