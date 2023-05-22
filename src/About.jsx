@@ -23,13 +23,14 @@ const About = () => {
           <div className="about-container">
             <header>
               <h3>About</h3>
-              <h6 className='about-caption'>Version 1.x.x</h6>
+              <h6 className="about-caption">Version 1.x.x</h6>
             </header>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur labore voluptates veniam eveniet ab. Odit inventore
-              placeat, distinctio commodi qui necessitatibus dolore facere hic?
-              Tempora quae unde illum voluptatem. Cum.
+              A single page application using React with Vite. The calculator supports
+              addition, subtraction, multiplication and division. It also
+              supports positive and negative numbers in the following number
+              sets: natural, whole, integer, and rational. The calculator supports
+              correct application of mathematical operations over time and in the correct order. 
             </p>
           </div>
         </div>
