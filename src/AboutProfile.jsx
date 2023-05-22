@@ -31,7 +31,6 @@ import codyAvatar from './images-about/cody.jpg';
 import zacAvatar from './images-about/zac-horton.jpg';
 import jordanAvatar from './images-about/jordan-daniel.jpg'
 
-import styled from 'styled-components';
 import { AiOutlineMail } from 'react-icons/ai';
 import { Profile, Paragraph, Email, Name} from '../style';
 
