@@ -1,7 +1,7 @@
-export const handleClick = (num, display, setDisplay, lastClickedOperator) => {
+export const handleClick = (num, display, setDisplay, equation, setEquation) => {
 
   if (num.func === 'handleNumberClick') {
-    handleNumberClick(num, display, setDisplay, lastClickedOperator);
+    setEquation(handleNumberClick(num, display, setDisplay, equation));
   }
 
   else {
@@ -10,20 +10,25 @@ export const handleClick = (num, display, setDisplay, lastClickedOperator) => {
 
 }
 
-const handleNumberClick = (num, display, setDisplay, lastClickedOperator) => {
-  if (display === '0' || lastClickedOperator === true) {
+const handleNumberClick = (num, display, setDisplay, equation) => {
+  const isOperatorEquals = /[+-\/*]/;
+  let equationStr = equation
+  if (equation[equation.length - 1] === '='){
+    equationStr = equation.slice(0, -1)
     setDisplay(num.val)
-    lastClickedOperator = false
-
+  }else if (display === '0' || isOperatorEquals.test(equation[equation.length - 1])){
+    setDisplay(num.val)
   } else {
     setDisplay(display + num.val)
   }
+  return equationStr = equationStr + num.val;
 }
 
 const handleDotClick = (num, display, setDisplay) => {
   if (!display.includes(num.val)) { 
     setDisplay(display + num.val)
   }
+
 }
 
 

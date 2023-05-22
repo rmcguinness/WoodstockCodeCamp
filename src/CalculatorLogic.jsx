@@ -1,11 +1,12 @@
 import { evaluate, abs } from 'mathjs';
 
-//const isOperator = /[+-\/*]/;
+const isOperator = /[+-\/*]/;
 
-export const handleFunctions = (buttonObj, display, setDisplay, equation, setEquation, lastClickedOperator) => {
+export const handleFunctions = (buttonObj, display, setDisplay, equation, setEquation) => {
   const displayValue = buttonObj.displayValue;
   const equationValue = buttonObj.equationValue;
   const action = buttonObj.action;
+  let lastClickedOperator = false;
 
   //check for and handle operator, AC, or "=" click
   switch (action) {
@@ -18,14 +19,13 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
     case 'clear':
       setEquation('');
       setDisplay('0');
-      lastClickedOperator = false;
       break;
     case 'pos_neg':
-      setDisplay(changeSign(display, displayValue, lastClickedOperator));
+      setDisplay(changeSign(display, displayValue));
       break;
     case 'equals':
-      setDisplay(calculate(equation, display, lastClickedOperator));
-      setEquation('');
+      setDisplay(calculate(equation, display));
+      setEquation('=');
       break;
   }
 };
@@ -33,22 +33,23 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
 When an operator is entered, push the displayed numbers to the equation,
 along with the clicked operator. */
 export const pushOperator = (equation, equationValue, display, lastClickedOperator) => {
-  if (lastClickedOperator === true) {
+  if (isOperator.test(equation[equation.length - 1])) {
     return equation.slice(0, -1) + equationValue;
   } else {
-    lastClickedOperator = true;   //change operator click to true to track last clicked was an operator
-    return equation + display + equationValue;
+    return equation + equationValue;
   }
 };
 
 /*calculate the equation when "=" is clicked, 
 displaying ERROR if clicked multiple times or divide by zero*/
-export const calculate = (equation, display, lastClickedOperator) => {
+export const calculate = (equation) => {
+  let equationStr = equation
   
-  lastClickedOperator = false;  //track operator click
-  const completeEquation = equation + display;
-  console.log(completeEquation);
-  const answer = evaluate(completeEquation);
+  if (isOperator.test(equation[equation.length - 1])) {
+    equationStr = equation.slice(0, -1)
+  }
+  const answer = evaluate(equationStr);
+  console.log(answer)
   
   if (answer === Infinity) {
     return "ERROR";
@@ -58,9 +59,8 @@ export const calculate = (equation, display, lastClickedOperator) => {
 };
 
 //change the sign of the displayed number
-export const changeSign = (display, lastClickedOperator) => {
+export const changeSign = (display) => {
   if (/\d/.test(display)) {
-    lastClickedOperator = false;  //track operator click
     let num = parseFloat(display);  //change string to float
     if (num > 0) {
       return (0 - num).toString();

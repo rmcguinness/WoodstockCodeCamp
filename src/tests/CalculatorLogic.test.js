@@ -19,11 +19,11 @@ it ('changes from negative to positive', () => {
 })
 
 it('returns error string if divide by zero', () => {
-  expect(calculate('1/', '0', false )).toBe('ERROR')
+  expect(calculate('1/', '0')).toBe('ERROR')
 })
 
 it('returns the evaluated equation', () => {
-  expect(calculate('3*2-', '1', false)).toBe(5)
+  expect(calculate('3*2-', '1')).toBe(5)
 })
 
 it('changes previously entered operator to last entered operator', () => {
@@ -32,9 +32,9 @@ it('changes previously entered operator to last entered operator', () => {
     A string for equationValue, which is the clicked operator,
     A string for display,
     A boolean for lastClickedOperator to track operator clicks */
-  expect(pushOperator('2+3-', '+', '0', true)).toBe('2+3+')
-  expect(pushOperator('2.5*', '/', '0', true)).toBe('2.5/')
-  expect(pushOperator('0.75+3.55/', '-', '0', true)).toBe('0.75+3.55-')
+  expect(pushOperator('2+3-', '+', '0')).toBe('2+3+')
+  expect(pushOperator('2.5*', '/', '0')).toBe('2.5/')
+  expect(pushOperator('0.75+3.55/', '-', '0')).toBe('0.75+3.55-')
 })
 
 it('adds an operator to equation', () => {
@@ -43,9 +43,9 @@ it('adds an operator to equation', () => {
     A string for equationValue, which is the clicked operator,
     A string for display,
     A boolean for lastClickedOperator to track operator clicks */
-  expect(pushOperator('4-2/', '+', '0.9', false)).toBe('4-2/0.9+')
-  expect(pushOperator('3.15/1.5+', '*', '8', false)).toBe('3.15/1.5+8*')
-  expect(pushOperator('0.85-2-', '/', '1', false)).toBe('0.85-2-1/')
+  expect(pushOperator('4-2/', '+', '0.9')).toBe('4-2/0.9+')
+  expect(pushOperator('3.15/1.5+', '*', '8')).toBe('3.15/1.5+8*')
+  expect(pushOperator('0.85-2-', '/', '1')).toBe('0.85-2-1/')
 })
 
 //checks switch satement for multiply operator click
@@ -55,7 +55,7 @@ it('checks multiply function click', () => {
   let equation = '';
   const setEquation = (val) => { equation = val };
 
-  handleFunctions(functions[2], display, setDisplay, equation, setEquation, false);
+  handleFunctions(functions[2], display, setDisplay, equation, setEquation);
 
   expect(equation).toBe('35*');
 })
@@ -67,7 +67,7 @@ it('checks addition function click', () => {
   let equation = '';
   const setEquation = (val) => { equation = val };
 
-  handleFunctions(functions[4], display, setDisplay, equation, setEquation, false);
+  handleFunctions(functions[4], display, setDisplay, equation, setEquation);
 
   expect(equation).toBe('70-12+');
 })
@@ -79,7 +79,7 @@ it('checks AC function click', () => {
   let equation = '';
   const setEquation = (val) => { equation = val };
 
-  handleFunctions(functions[0], display, setDisplay, equation, setEquation, false);
+  handleFunctions(functions[0], display, setDisplay, equation, setEquation);
 
   expect(equation).toBe('');
   expect(display).toBe('0')
@@ -93,7 +93,7 @@ it('checks positive to negative function click', () => {
   let equation = '';
   const setEquation = (val) => { equation = val };
 
-  handleFunctions(functions[1], display, setDisplay, equation, setEquation, false);
+  handleFunctions(functions[1], display, setDisplay, equation, setEquation);
 
   expect(display).toBe('-44')
 })
@@ -106,7 +106,7 @@ it('checks negative to positive function click', () => {
   let equation = '';
   const setEquation = (val) => { equation = val };
 
-  handleFunctions(functions[1], display, setDisplay, equation, setEquation, false);
+  handleFunctions(functions[1], display, setDisplay, equation, setEquation);
 
   expect(display).toBe('15')
 })
@@ -119,7 +119,7 @@ it('checks equals function click', () => {
   let equation = '9*10+';
   const setEquation = (val) => { equation = val };
 
-  handleFunctions(functions[6], display, setDisplay, equation, setEquation, false);
+  handleFunctions(functions[6], display, setDisplay, equation, setEquation);
 
   expect(display).toBe(98);
 })
