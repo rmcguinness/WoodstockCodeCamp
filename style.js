@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const altColor = '#ffc107';
+export const altColor = '#393937';
 
 export const Name = styled.h5`
   font-size: 1rem;
