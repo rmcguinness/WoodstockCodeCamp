@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { handleFunctions } from './CalculatorLogic.jsx';
+import { handleFunctions } from './CalculatorLogic';
 import { useRecoilState } from "recoil";
 import { displayState, equationState } from './State';
 
