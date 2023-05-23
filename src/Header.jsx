@@ -13,16 +13,21 @@
 // limitations under the License.
 import "./Header.css"
 import {Link}  from "react-router-dom";
+import mainlogo from "./images-about/bendy.webp";
+import mainlogo from "./images-about/bendy2.jpg";
 const Header = () => {
   return(
     <>
       
         <nav className="header">
+          <div className="nav-background"></div>
           <ul className="list">
-            <li className="flex-child"><Link to="/">Calculator</Link></li>
-            <li className="flex-child"><Link to="/about">About Us</Link></li>
-            <li className="flex-child"><Link to="/help">Help</Link></li>
-          </ul>
+          <li className="flex-child"><img src={mainlogo} id="logo"/></li>
+          <li className="flex-child" id="blank"></li>
+          <li className="flex-child"><Link to="/">Calculator</Link></li>
+          <li className="flex-child"><Link to="/about">About Us</Link></li>
+          <li className="flex-child"><Link to="/help">Help</Link></li>
+</ul>
         </nav>
     </>
   )
