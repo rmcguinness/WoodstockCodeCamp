@@ -29,10 +29,10 @@ import josilynAvatar from './images-about/crazyTrain.jpeg';
 import JenilleAvatar from './images-about/20221008_170821.jpg';
 import codyAvatar from './images-about/cody.jpg';
 import zacAvatar from './images-about/zac-horton.jpg';
-import jordanAvatar from './images-about/jordan-daniel.jpg'
+import jordanAvatar from './images-about/jordan-daniel.jpg';
 
 import { AiOutlineMail } from 'react-icons/ai';
-import { Profile, Paragraph, Email, Name} from '../style';
+import { Profile, Paragraph, Email, Name } from '../style';
 
 let bioObjs = [
   {
@@ -83,14 +83,18 @@ let bioObjs = [
 const AboutProfile = () => {
   let arrayBioObjs = bioObjs.map((bioObj) => (
     <div key={bioObj.id}>
-      <Profile>
+      <Profile
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <Name>{bioObj.name}</Name>
-        
+
         <img src={bioObj.avatar} />
         <Email>
           <AiOutlineMail className="email-icon" />
           <email>{bioObj.email}</email>
-          </Email>
+        </Email>
         <Paragraph>
           <p>{bioObj.bio}</p>
         </Paragraph>

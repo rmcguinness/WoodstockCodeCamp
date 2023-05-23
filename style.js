@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const altColor = '#0d6efd';
+export const altColor = '#ffc107';
 
 export const Name = styled.h5`
   font-size: 1rem;
@@ -28,7 +29,7 @@ export const Email = styled.div`
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `;
 
-export const Profile = styled.div`
+export const Profile = styled(motion.div)`
   max-width: 250px;
   margin: auto;
   display: flex;
