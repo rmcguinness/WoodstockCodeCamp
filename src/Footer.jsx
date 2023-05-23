@@ -17,7 +17,7 @@ const Footer = () => {
   return(
     <>
       
-        <footer>
+        <footer className="footer-background">
           <div>
           <ul className="list">
             <li>

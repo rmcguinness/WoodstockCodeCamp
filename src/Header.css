@@ -29,5 +29,21 @@ li{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: rgb(239, 194, 46);
+}
+#logo{
+    width:120px;
+    height: 120px;
+    
+}
+#blank{
+    width:60vw;
+}
+nav{
+    background-image:url("./images-about/bendy2.jpg");
+    width:100%;
+    height:150px;
+    background-repeat: no-repeat;
+    border:2px solid #cc9957;
+    background-size: cover;
 }
