@@ -19,8 +19,8 @@
     position:left;
     margin:0;
     padding:0;
-    display:flex;
-    justify-content: flex-end;
+     display:flex; 
+    /* justify-content: flex-end; */
 }
 li{
     font-size:25px;
@@ -34,10 +34,6 @@ a{
 #logo{
     width:120px;
     height: 120px;
-    
-}
-#blank{
-    width:60vw;
 }
 nav{
     background-image:url("./images-about/bendy2.jpg");
@@ -46,4 +42,10 @@ nav{
     background-repeat: no-repeat;
     border:2px solid #cc9957;
     background-size: cover;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+margin: auto;
 }
