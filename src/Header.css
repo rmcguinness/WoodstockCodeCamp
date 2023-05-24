@@ -13,21 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
 
-.list{
-    list-style-type:none;
-    position:left;
-    margin:0;
-    padding:0;
-    display:flex;
-    justify-content: flex-end;
+.list {
+  list-style-type: none;
+  position: left;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
 }
-li{
-    font-size:25px;
-    padding: 15px;
-    font-weight: bold;
+li {
+  font-size: 25px;
+  padding: 15px;
+  font-weight: bold;
 }
-a{
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
 }

@@ -18,11 +18,15 @@ const Header = () => {
     <>
       
         <nav className="header">
+        <div className="img-container">
+        </div>
+        <div className="link-container">
           <ul className="list">
             <li className="flex-child"><Link to="/">Calculator</Link></li>
             <li className="flex-child"><Link to="/about">About Us</Link></li>
             <li className="flex-child"><Link to="/help">Help</Link></li>
           </ul>
+          </div>
         </nav>
     </>
   )
