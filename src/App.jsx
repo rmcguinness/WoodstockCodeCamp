@@ -19,7 +19,7 @@ function App() {
 }
 function Layout() {
   return (
-    <div>
+    <div style={{backgroundColor: '#d9d9d9'}}>
       <Header />
       <h1>Calculator Application</h1>
       <hr />

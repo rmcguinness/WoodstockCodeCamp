@@ -41,8 +41,8 @@ export const Profile = styled(motion.div)`
 
 export const Circle = styled.div`
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 255px;
+  height: 255px;
   left: 47px;
   position: relative;
   top: 8rem;
