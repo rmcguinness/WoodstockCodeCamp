@@ -14,27 +14,41 @@
 
 import './About.css';
 import AboutProfile from './AboutProfile';
+import { Circle } from '../style';
+
+
 
 const About = () => {
+
+  let textColor = '#e4af3a';
+
   return (
     <>
       <div className="about-header">
         <div className="about-wrapper">
           <div className="about-container">
             <header>
-              <h3>About</h3>
+              <h3 style={{color: textColor}}>About</h3>
               <h6 className="about-caption">Version 1.x.x</h6>
             </header>
-            <p>
-              A single page application using React with Vite. The calculator supports
-              addition, subtraction, multiplication and division. It also
-              supports positive and negative numbers in the following number
-              sets: natural, whole, integer, and rational. The calculator supports
-              correct application of mathematical operations over time and in the correct order. 
+
+            <p style={{color: textColor}}>
+              A single page application using React with Vite. The calculator
+              supports addition, subtraction, multiplication and division. It
+              also supports positive and negative numbers in the following
+              number sets: natural, whole, integer, and rational. The calculator
+              supports correct application of mathematical operations over time
+              and in the correct order.
             </p>
           </div>
         </div>
       </div>
+
+      <Circle style={{ padding: '40px' }}>
+        <p style={{ position: 'relative', left: '80px', fontSize: '2em' }}>
+          MEET THE TEAM
+        </p>
+      </Circle>
       <AboutProfile />
     </>
   );

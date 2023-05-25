@@ -92,7 +92,7 @@ const AboutProfile = () => {
 
         <img src={bioObj.avatar} />
         <Email>
-          <AiOutlineMail className="email-icon" />
+          
           <email>{bioObj.email}</email>
         </Email>
         <Paragraph>
