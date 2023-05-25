@@ -17,6 +17,7 @@ import CalculatorFunctionButton from "./CalculatorFunctionButton";
 import CalculatorNumberButton from "./CalculatorNumberButton";
 import { functions } from "./CalculatorFunctionData";
 import { buttons } from "./CalculatorNumberData"
+import "./Calculator.css"
 
 
 const Calculator = () => {
@@ -26,16 +27,15 @@ const Calculator = () => {
                           
   const numberButtons = buttons.map(num => <CalculatorNumberButton key={num.val} obj={num}/>)
   return(
-    <>
+    <div id="calculatorWrapper">
       <h3>Calculator</h3>
-      <CalculatorDisplay />
-      <div id="numberButtons">
-        {numberButtons}
+      <div id="calculatorBody">
+        <CalculatorDisplay />
+        <div id="buttons">
+        {functionButtons}{numberButtons}
+        </div>
       </div>
-      <div id="functionButtons">
-        {functionButtons}
-      </div>
-    </>
+    </div>
   )
 }
 

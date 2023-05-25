@@ -29,7 +29,7 @@ const CalculatorNumberButton = (props) => {
   }
 
   return (
-      <button id={num.val} onClick={() => handleClicked()}>{num.val}</button>
+      <button className="button" id={num.id} onClick={() => handleClicked()}>{num.val}</button>
   )
 }
 

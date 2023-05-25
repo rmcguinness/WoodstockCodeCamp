@@ -15,15 +15,17 @@
  */
 
 .output {
-  position:absolute;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 90%;
   /*font-size: 2rem;*/
-  
   border: none;
-  background-color: #252525;
-  color: #fff;
+  background-color: #fff;
+  color: #252525;
   text-align: right;
   padding-right: 60px;
   padding-left: 10px;
-  word-wrap: break-word;
+  margin-bottom: 20px;
+  height: 40px;
 }
