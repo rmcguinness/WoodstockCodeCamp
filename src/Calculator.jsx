@@ -17,6 +17,7 @@ import CalculatorFunctionButton from "./CalculatorFunctionButton";
 import CalculatorNumberButton from "./CalculatorNumberButton";
 import { functions } from "./CalculatorFunctionData";
 import { buttons } from "./CalculatorNumberData"
+import { Circle } from "../style";
 import "./Calculator.css"
 
 
@@ -26,7 +27,17 @@ const Calculator = () => {
   const functionButtons = functions.map(o => <CalculatorFunctionButton key={o.id} obj={o}/>)
                           
   const numberButtons = buttons.map(num => <CalculatorNumberButton key={num.val} obj={num}/>)
-  return(
+  return(<>
+    <div className="calculator-container">
+    <div className="circle-wrap">
+        <Circle>
+          <p id="circle-caption">
+            the calculator app created by us,
+            for you
+          </p>
+    </Circle>
+    </div>
+    
     <div id="calculatorWrapper">
       <h3>Calculator</h3>
       <div id="calculatorBody">
@@ -35,7 +46,9 @@ const Calculator = () => {
         {functionButtons}{numberButtons}
         </div>
       </div>
-    </div>
+      </div>
+      </div>
+    </>
   )
 }
 
