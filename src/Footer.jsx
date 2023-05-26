@@ -19,13 +19,9 @@ const Footer = () => {
       
         <footer className="footer-background">
           <div>
-          <ul className="list">
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-            <li>
-              <Link to="/help">Help</Link>
-            </li>
+          <ul className="footer-list">
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/help">Help</Link></li>
           </ul>
           </div>
           <p className="copyright">copyright (c)2023 Jabberbox</p>
