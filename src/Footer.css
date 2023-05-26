@@ -14,18 +14,24 @@
  * limitations under the License.
  */
 
-.footer{
+.footer-background{
     position:relative;
     width:100%;
     min-height:100px;
     display:flex;
-    justify-content: left;
+    justify-content: right;
     flex-direction: column;
 }
-.footer p{
+.footer-background p{
     font-size:1rem;
     font-weight: 300;
 }
+.footer-list{
+    color:red;
+    display: flex;
+    justify-content: center;
+}
+
 .footer-background{
     background-image:url("./images-about/bendy2.jpg");
     width:100%;
@@ -41,11 +47,16 @@ div{
 }
 li{
     list-style-type: none;
+
 }
-list{
+.list{
     list-style-type: none;
+    text-align: center;
 }
 .copyright{
     font-size: medium;
-    color:#cc9957
+    /* color:#cc9957; */
+    color:white;
+    background-color: black;
+    text-align: center;
 }
