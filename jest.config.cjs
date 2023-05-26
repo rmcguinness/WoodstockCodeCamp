@@ -7,7 +7,7 @@ const config = {
   },
   moduleNameMapper: {
     "\\.(css|less|sass|scss)$": "<rootDir>/build/css_mock.js",
-    "\\.(jpeg|jpg|gif|ttf|eot|svg)$": "<rootDir>/build/file_mock.js"
+    "\\.(jpeg|jpg|gif|ttf|eot|svg|webp)$": "<rootDir>/build/file_mock.js"
   }
 }
 
