@@ -22,7 +22,7 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
     case 'pos_neg':
       let switchSign = changeSign(display, displayValue);
       setDisplay(switchSign);
-      setEquation(switchSign);
+      setEquation(equation.slice(0, -1) + switchSign);   //replace last number in equation to number with opposite sign
       break;
     case 'equals':
       setDisplay(calculate(equation));
@@ -45,12 +45,11 @@ export const pushOperator = (equation, equationValue) => {
 displaying ERROR if clicked multiple times or divide by zero*/
 export const calculate = (equation) => {
   let equationStr = equation
-  
+  console.log("Equation to evaluate: " + equation)
   if (isOperator.test(equation[equation.length - 1])) {
     equationStr = equation.slice(0, -1)
   }
   const answer = evaluate(equationStr);
-  console.log(answer)
   
   if (answer === Infinity) {
     return "ERROR";
