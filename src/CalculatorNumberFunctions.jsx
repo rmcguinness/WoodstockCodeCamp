@@ -4,7 +4,6 @@ export const handleClick = (num, display, setDisplay, equation, setEquation) => 
 
   if (num.func === 'handleNumberClick') {
     setEquation(handleNumberClick(num, display, setDisplay, equation));
-    console.log(equation)
   }
 
   else {
