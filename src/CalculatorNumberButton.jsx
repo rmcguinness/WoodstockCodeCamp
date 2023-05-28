@@ -29,7 +29,7 @@ const CalculatorNumberButton = (props) => {
   }
 
   return (
-      <button className="button" id={num.id} onClick={() => handleClicked()}>{num.val}</button>
+      <button className="button" data-testid={'btn_' + num.id} id={num.id} onClick={() => handleClicked()}>{num.val}</button>
   )
 }
 

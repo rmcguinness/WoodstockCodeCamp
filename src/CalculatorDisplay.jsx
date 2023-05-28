@@ -20,7 +20,7 @@ const CalculatorDisplay = () => {
 
   return(
     <>
-      <span className="output">{display}</span>
+      <span className="output" data-testid="calc_display">{display}</span>
     </>
   )
 }
