@@ -51,7 +51,6 @@ describe('testing recoil state of equation', () => {
     );
     
     fireEvent.click(screen.getByTestId('btn_zero'))
-    console.log(onChange)
     fireEvent.click(screen.getByTestId('btn_zero'))
     fireEvent.click(screen.getByTestId('btn_zero'))
     fireEvent.click(screen.getByTestId('btn_one'))
@@ -61,7 +60,7 @@ describe('testing recoil state of equation', () => {
       expect(val.textContent).toBe('1');
     })
   
-    
+    expect(onChange).toHaveBeenCalledTimes(5);
     expect(onChange).toHaveBeenCalledWith('0001');
   });
 
