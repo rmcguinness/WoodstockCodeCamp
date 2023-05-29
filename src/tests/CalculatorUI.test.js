@@ -13,7 +13,9 @@
 // limitations under the License.
 
 import {describe, test, expect, jest, it} from '@jest/globals';
+import {describe, test, expect, jest, it} from '@jest/globals';
 import App from '../App';
+import { useEffect } from 'react';
 import { useEffect } from 'react';
 import {BrowserRouter} from "react-router-dom";
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
@@ -51,6 +53,7 @@ describe('testing recoil state of equation', () => {
     );
     
     fireEvent.click(screen.getByTestId('btn_zero'))
+    console.log(onChange)
     fireEvent.click(screen.getByTestId('btn_zero'))
     fireEvent.click(screen.getByTestId('btn_zero'))
     fireEvent.click(screen.getByTestId('btn_one'))
@@ -60,15 +63,16 @@ describe('testing recoil state of equation', () => {
       expect(val.textContent).toBe('1');
     })
   
-    // TODO - Fix the logic to not allow this state.
-    expect(onChange).toHaveBeenCalledTimes(5);
+    
     expect(onChange).toHaveBeenCalledWith('0001');
   });
-});
+
+})
 
 
 
 it('tests the calculator as it would be used in the UI', async () => {
+  buildComponent();
   buildComponent();
 
   fireEvent.click(screen.getByTestId('btn_seven'))

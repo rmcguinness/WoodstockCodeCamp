@@ -16,8 +16,13 @@ const handleNumberClick = (num, display, setDisplay, equation) => {
 
   let equationStr = equation;
 
-  //display a new number on initial click, after an operator click, or after equals click 
-  if (display === '0' || isOperator.test(equation[equation.length - 1]) || equationStr === ''){
+  //display a new number after an equals was clicked
+  if (equation[equation.length - 1] === '=') {
+    equationStr = equation.slice(0, -1)
+    setDisplay(num.val)
+
+  //display a new number on initial click or after an operator click  
+  }else if (display === '0' || isOperator.test(equation[equation.length - 1])){
     setDisplay(num.val)
   } else {
     setDisplay(display + num.val)
