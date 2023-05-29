@@ -60,11 +60,11 @@ describe('testing recoil state of equation', () => {
       expect(val.textContent).toBe('1');
     })
   
+    // TODO - Fix the logic to not allow this state.
     expect(onChange).toHaveBeenCalledTimes(5);
     expect(onChange).toHaveBeenCalledWith('0001');
   });
-
-})
+});
 
 
 
