@@ -18,7 +18,7 @@ const handleNumberClick = (num, display, setDisplay, equation) => {
   let equationStr = equation;
 
   //display a new number after an equals was clicked
-  if (equation[equation.length - 1] === '='){
+  if (equation[equation.length - 1] === '=') {
     equationStr = equation.slice(0, -1)
     setDisplay(num.val)
 
@@ -32,7 +32,6 @@ const handleNumberClick = (num, display, setDisplay, equation) => {
 }
 
 const handleDotClick = (num, display, setDisplay, equation) => {
-
   let equationStr = equation;
   //if an operator is last clicked, reset the display
   if (isOperator.test(equation[equation.length - 1])){
@@ -44,7 +43,6 @@ const handleDotClick = (num, display, setDisplay, equation) => {
     setDisplay(display + num.val);
     return equationStr = equationStr + num.val;
   }
-
 }
 
 
