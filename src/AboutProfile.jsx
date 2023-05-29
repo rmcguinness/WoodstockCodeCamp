@@ -25,7 +25,7 @@
  * Add mini-tabs for different technologies for each developer
  */
 import heatherAvatar from './images-about/IMG_2306.jpeg';
-import josilynAvatar from './images-about/crazyTrain.jpeg';
+import josilynAvatar from './images-about/Josilyn.jpeg';
 import JenilleAvatar from './images-about/20221008_170821.jpg';
 import codyAvatar from './images-about/cody.jpg';
 import zacAvatar from './images-about/zac-horton.jpg';
@@ -46,9 +46,9 @@ let bioObjs = [
   {
     id: 1,
     name: 'Josilyn McGuinness',
-    email: 'josilyn@fallingonline.com',
+    email: 'github/JosMcG',
     avatar: josilynAvatar,
-    bio: 'I am flooding my desiccated sponge of a brain with, what feels like, an onslot of technical information in hopes it will eventually soak it up, enabling me to become a proficient programmer ',
+    bio: 'Through taking various programming classes, going through freecodecamp.org, and self-learning, I am on my journey to becoming a proficient programmer.',
   },
   {
     id: 2,
