@@ -26,7 +26,9 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
       break;
     case 'equals':
       setDisplay(calculate(equation));
-      setEquation('=');
+      setEquation('');
+      break;
+    default:
       break;
   }
 };
@@ -44,10 +46,14 @@ export const pushOperator = (equation, equationValue) => {
 /*calculate the equation when "=" is clicked, 
 displaying ERROR if clicked multiple times or divide by zero*/
 export const calculate = (equation) => {
-  let equationStr = equation
-  console.log("Equation to evaluate: " + equation)
+  let equationStr = equation;
+
+  if (equationStr === ''){
+    return '0';
+  }
+
   if (isOperator.test(equation[equation.length - 1])) {
-    equationStr = equation.slice(0, -1)
+    equationStr = equation.slice(0, -1);
   }
   const answer = evaluate(equationStr);
   

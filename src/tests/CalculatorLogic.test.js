@@ -46,9 +46,9 @@ it('adds an operator to equation', () => {
 
 //checks switch statement for AC click
 it('checks AC function click', () => {
-  let display = '70-12';
+  let display = '70-12'
   const setDisplay = (val) => { display = val }
-  let equation = '';
+  let equation = ''
   const setEquation = (val) => { equation = val }
 
   handleFunctions(functions[0], display, setDisplay, equation, setEquation);
@@ -59,7 +59,7 @@ it('checks AC function click', () => {
 
 //checks switch statement for pos_neg click changing positive to negative
 it('checks positive to negative function click', () => {
-  let display = '44';
+  let display = '44'
   const setDisplay = (val) => { display = val }
 
   let equation = '';
