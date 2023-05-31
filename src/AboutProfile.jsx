@@ -93,7 +93,7 @@ const AboutProfile = () => {
         <img src={bioObj.avatar} />
         <Email>
           
-          <email>{bioObj.email}</email>
+          <Email>{bioObj.email}</Email>
         </Email>
         <Paragraph>
           <p>{bioObj.bio}</p>
