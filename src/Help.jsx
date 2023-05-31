@@ -16,8 +16,6 @@ import './Help.css'
 const Help = () => {
   return(
     <>
-      
-      <h3>Help</h3>
       <div className = "help">
         <p><strong>Note On Calculator Logic:</strong> It should be noted that there are two main 
         schools of thought on calculator input logic: immediate execution logic and formula logic.

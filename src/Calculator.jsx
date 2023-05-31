@@ -40,7 +40,6 @@ const Calculator = () => {
         </div>
 
         <div id="calculatorWrapper">
-          <h3>Calculator</h3>
           <div id="calculatorBody">
             <CalculatorDisplay />
             <div id="buttons">
