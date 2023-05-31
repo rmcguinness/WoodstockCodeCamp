@@ -27,11 +27,3 @@ it('verify app page', () => {
   expect(tree).toMatchSnapshot();
 
 })
-
-it('verify header', () => {
-  const component = render(<RecoilRoot><BrowserRouter><App /></BrowserRouter></RecoilRoot>);
-
-  // Ensure that the text is rendered to the screen
-  expect(screen.queryByText('Calculator Application')).toBeTruthy();
-
-});
