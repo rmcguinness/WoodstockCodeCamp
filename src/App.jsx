@@ -21,8 +21,6 @@ function Layout() {
   return (
     <div style={{backgroundColor: '#d9d9d9'}}>
       <Header />
-      <h1>Calculator Application</h1>
-      <hr />
       <Outlet />
       <Footer />
     </div>
