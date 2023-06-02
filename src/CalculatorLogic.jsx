@@ -1,4 +1,4 @@
-import { evaluate, abs } from 'mathjs';
+import { evaluate, abs, format } from 'mathjs';
 
 const isOperator = /\+|-|\*|\//;  //checks for operators
 
@@ -48,16 +48,22 @@ displaying ERROR if clicked multiple times or divide by zero*/
 export const calculate = (equation) => {
   let equationStr = equation;
 
+  //if equals is clicked numerous times after evaluating the equation, display a 0
   if (equationStr === ''){
     return '0';
   }
 
+  //if an operator is clicked immediately prior to equals, remove the operator
   if (isOperator.test(equation[equation.length - 1])) {
     equationStr = equation.slice(0, -1);
   }
-  const answer = evaluate(equationStr);
+
+  //evaluate the equation
+  let answer = evaluate(equationStr);
+  answer = format(answer, {precision: 15});  //hides round-off errors with floats; returns a string
   
-  if (answer === Infinity) {
+  //display ERROR for divide by zero
+  if (answer === 'Infinity') {
     return "ERROR";
   } else {
     return answer;

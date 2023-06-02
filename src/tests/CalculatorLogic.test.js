@@ -23,7 +23,11 @@ it('returns error string if divide by zero', () => {
 })
 
 it('returns the evaluated equation', () => {
-  expect(calculate('3*2-1')).toBe(5)
+  expect(calculate('3*2-1')).toBe('5')
+})
+
+it('returns the evaluated equation', () => {
+  expect(calculate('4-2.2')).toBe('1.8')
 })
 
 it('changes previously entered operator to last entered operator', () => {
@@ -95,7 +99,7 @@ it('checks equals function click', () => {
 
   handleFunctions(functions[6], display, setDisplay, equation, setEquation)
 
-  expect(display).toBe(90)
+  expect(display).toBe('90')
 })
 
 it('checks equals function click with negatives', () => {
@@ -107,5 +111,5 @@ it('checks equals function click with negatives', () => {
 
   handleFunctions(functions[6], display, setDisplay, equation, setEquation)
 
-  expect(display).toBe(42)
+  expect(display).toBe('42')
 })
