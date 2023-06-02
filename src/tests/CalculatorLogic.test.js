@@ -22,13 +22,14 @@ it('returns error string if divide by zero', () => {
   expect(calculate('1/0')).toBe('ERROR')
 })
 
-it('returns the evaluated equation', () => {
+it('returns the evaluated equation with multiple numbers and operators', () => {
   expect(calculate('3*2-1')).toBe('5')
 })
 
-it('returns the evaluated equation', () => {
+it('returns the evaluated equation with a decimal', () => {
   expect(calculate('4-2.2')).toBe('1.8')
 })
+
 
 it('changes previously entered operator to last entered operator', () => {
   /*pushOperator takes two parameters -

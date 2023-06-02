@@ -21,8 +21,9 @@ export const handleFunctions = (buttonObj, display, setDisplay, equation, setEqu
       break;
     case 'pos_neg':
       let switchSign = changeSign(display, displayValue);
+      //replace last number in equation to number displayed after the sign changed
+      setEquation(equation.slice(0, equation.length - display.length) + switchSign); 
       setDisplay(switchSign);
-      setEquation(equation.slice(0, -1) + switchSign);   //replace last number in equation to number with opposite sign
       break;
     case 'equals':
       setDisplay(calculate(equation));
