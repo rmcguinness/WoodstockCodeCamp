@@ -38,7 +38,8 @@ let bioObjs = [
   {
     id: 0,
     name: 'Heather Jackson',
-    email: 'heather.jackson2003@gmail.com',
+    email: 'github/HeathJackson',
+    link: 'https://github.com/HeathJackson',
     avatar: heatherAvatar,
     bio: 'I am currently becoming a web-developer through Free Code Camp',
   },
@@ -47,34 +48,39 @@ let bioObjs = [
     id: 1,
     name: 'Josilyn McGuinness',
     email: 'github/JosMcG',
+    link: 'https://github.com/JosMcG',
     avatar: josilynAvatar,
     bio: 'Through taking various programming classes, going through freecodecamp.org, and self-learning, I am on my journey to becoming a proficient programmer.',
   },
   {
     id: 2,
     name: 'Jenille Tulloch-Douglas',
-    email: 'jenilletulloch@gmail.com',
+    email: 'github/JTulloch1',
+    link: 'https://github.com/JTulloch1',
     avatar: JenilleAvatar,
     bio: 'I am currently learning Web-Development through FreeCodeCamp Woodstock',
   },
   {
     id: 3,
     name: 'Cody Black',
-    email: 'cdblack86@gmail.com',
+    email: 'github/CBlack86',
+    link: 'https://github.com/CBlack86',
     avatar: codyAvatar,
     bio: 'Working through FreeCodeCamp with the goal of becoming a software engineer',
   },
   {
     id: 4,
     name: 'Zac Horton',
-    email: 'fullstackzac@gmail.com',
+    email: 'github/ZacHorton',
+    link: 'https://github.com/ZacHorton',
     avatar: zacAvatar,
     bio: 'Husband, father, and problem solver who is using the freeCodeCamp curriculum and other resources to become a full-stack web developer',
   },
   {
     id: 5,
     name: 'Jordan Daniel',
-    email: 'jjosephd804@gmail.com',
+    email: 'github/JJosephD',
+    link: 'https://github.com/JJosephD',
     avatar: jordanAvatar,
     bio: 'Jr. Software Engineer experienced in using technologies such as HTML, CSS, JS, React, TailwindCSS, Node',
   },
@@ -89,12 +95,8 @@ const AboutProfile = () => {
         exit={{ opacity: 0 }}
       >
         <Name>{bioObj.name}</Name>
-
         <img src={bioObj.avatar} />
-        <Email>
-          
-          <Email>{bioObj.email}</Email>
-        </Email>
+        <Email><a href={bioObj.link} target="_blank" rel="noreferrer">{bioObj.email}</a></Email>
         <Paragraph>
           <p>{bioObj.bio}</p>
         </Paragraph>
