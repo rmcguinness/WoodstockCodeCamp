@@ -1,3 +1,8 @@
+/**
+ * style.js file created to maintain readibility of team bio's
+ * Framer motion dependency used to add smoother tranistion to page
+ */
+
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 

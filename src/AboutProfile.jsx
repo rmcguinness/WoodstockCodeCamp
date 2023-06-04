@@ -83,6 +83,10 @@ let bioObjs = [
 const AboutProfile = () => {
   let arrayBioObjs = bioObjs.map((bioObj) => (
     <div key={bioObj.id}>
+
+      {/**Profile created using styled component to maintain readability of entire bio.*/}
+
+
       <Profile
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -91,10 +95,12 @@ const AboutProfile = () => {
         <Name>{bioObj.name}</Name>
 
         
-        {/**Image avatar */}
+        {/**Bio Image avatar */}
         <img src={bioObj.avatar} />
         {/**Email style component from style.js */}
-          <Email><FaGithub/>{bioObj.email}</Email>
+        <Email><FaGithub className='github-icon' />{bioObj.email}</Email>
+        
+        {/**Paragraph style component to allow easy readability of bio */}
         <Paragraph>
           <p>{bioObj.bio}</p>
         </Paragraph>

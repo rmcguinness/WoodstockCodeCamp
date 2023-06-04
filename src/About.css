@@ -16,10 +16,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
-:root {
-  --alt-color: #0d6efd;
-}
-
 img {
   display: block;
   width: 200px;
@@ -50,7 +46,7 @@ img {
   }
 }
 
-.email-icon {
+.github-icon {
   margin-right: 4px;
 }
 .about-header {
@@ -89,9 +85,6 @@ img {
 #team-header {
   display: flex;
   justify-content: center;
-}
-
-#team-header h2 {
 }
 
 @media (max-width: 780px) {
