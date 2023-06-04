@@ -28,7 +28,7 @@ const About = () => {
         <div className="about-wrapper">
           <div className="about-container">
             <header>
-              <h3 style={{color: textColor}}>About</h3>
+              <h3 >About</h3>
               <h6 className="about-caption">Version 1.x.x</h6>
             </header>
 
@@ -44,8 +44,8 @@ const About = () => {
         </div>
       </div>
 
-      <Circle style={{ padding: '40px' }}>
-        <p style={{ position: 'relative', left: '80px', fontSize: '2em' }}>
+      <Circle >
+        <p>
           MEET THE TEAM
         </p>
       </Circle>
