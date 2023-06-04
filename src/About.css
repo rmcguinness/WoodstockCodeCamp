@@ -86,6 +86,14 @@ img {
   justify-content: center;
 }
 
+#team-header {
+  display: flex;
+  justify-content: center;
+}
+
+#team-header h2 {
+}
+
 @media (max-width: 780px) {
   .profile-wrap {
     display: flex;

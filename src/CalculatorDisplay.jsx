@@ -20,7 +20,10 @@ const CalculatorDisplay = () => {
 
   return(
     <>
-      <span className="output">{display}</span>
+      <div className="calculator-wrap">
+      <span className="output" id='mini-display'>{display}</span>
+        <span className="output main-display">{display}</span>
+        </div>
     </>
   )
 }

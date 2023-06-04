@@ -16,19 +16,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
+.calculator-wrap {
+  width: 100%;
+  padding-top: 100px;
+}
 .output {
   display: flex;
   align-items: center;
-  justify-content: right;
-  width: 90%;
-  font-size: 1.5em;
+  justify-content: end;
+  /* width: 65%; */
+  font-size: 3.5em;
   border: none;
-  background-color: #fff;
-  color: #252525;
+  color: #eee;
   text-align: right;
-  padding-right: 60px;
-  padding-left: 10px;
-  margin-bottom: 20px;
-  height: 40px;
-  font-family: 'Orbitron', sans-serif;
+  padding-right: 40px;
+  color: black;
+  /* padding-left: 10px;*/
+}
+
+.output.main-display {
+}
+
+#mini-display {
+  font-size: 1em;
 }

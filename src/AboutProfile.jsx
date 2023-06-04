@@ -31,7 +31,7 @@ import codyAvatar from './images-about/cody.jpg';
 import zacAvatar from './images-about/zac-horton.jpg';
 import jordanAvatar from './images-about/jordan-daniel.jpg';
 
-import { AiOutlineMail } from 'react-icons/ai';
+import { FaGithub } from 'react-icons/fa';
 import { Profile, Paragraph, Email, Name } from '../style';
 
 let bioObjs = [
@@ -90,11 +90,11 @@ const AboutProfile = () => {
       >
         <Name>{bioObj.name}</Name>
 
+        
+        {/**Image avatar */}
         <img src={bioObj.avatar} />
-        <Email>
-          
-          <Email>{bioObj.email}</Email>
-        </Email>
+        {/**Email style component from style.js */}
+          <Email><FaGithub/>{bioObj.email}</Email>
         <Paragraph>
           <p>{bioObj.bio}</p>
         </Paragraph>
