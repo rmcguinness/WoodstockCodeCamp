@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 
 :root {
   --alt-color: #0d6efd;
+  --orange: #e4af3a;
 }
 
 img {
@@ -34,6 +35,21 @@ img {
     margin: auto;
   }
 }
+
+.orange-text {
+  color: var(--orange);
+}
+
+.circle-wrapper {
+  padding: 40px;
+}
+
+.circle-text {
+  position: relative;
+  left: 80px;
+  font-size: 2em;
+}
+
 .profile-wrap {
   padding: 40px;
   margin: 40px 200px;
@@ -45,7 +61,7 @@ img {
   justify-content: center;
   align-items: center;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   @media (max-width: 1000px) {
   }
 }
@@ -73,7 +89,7 @@ img {
   float: right;
   position: relative;
   top: 10px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 .about-container header .about-caption {
   margin-left: 1.5px;
