@@ -19,20 +19,17 @@ import { Circle } from '../style';
 
 
 const About = () => {
-
-  let textColor = '#e4af3a';
-
   return (
     <>
       <div className="about-header">
         <div className="about-wrapper">
           <div className="about-container">
             <header>
-              <h3 style={{color: textColor}}>About</h3>
+              <h3 className="orange-text">About</h3>
               <h6 className="about-caption">Version 1.x.x</h6>
             </header>
 
-            <p style={{color: textColor}}>
+            <p className="orange-text">
               A single page application using React with Vite. The calculator
               supports addition, subtraction, multiplication and division. It
               also supports positive and negative numbers in the following
@@ -44,8 +41,8 @@ const About = () => {
         </div>
       </div>
 
-      <Circle style={{ padding: '40px' }}>
-        <p style={{ position: 'relative', left: '80px', fontSize: '2em' }}>
+      <Circle className="circle-wrapper">
+        <p className="circle-text">
           MEET THE TEAM
         </p>
       </Circle>
