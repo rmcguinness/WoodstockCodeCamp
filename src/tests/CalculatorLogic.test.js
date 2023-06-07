@@ -6,16 +6,17 @@ import { calculate } from '../CalculatorLogic';
 import { pushOperator } from '../CalculatorLogic';
 import { functions } from '../CalculatorFunctionData';
 
-it ('changes from positve to negative', () => {
-  expect(changeSign('1')).toBe('-1')
-  expect(changeSign('3.14')).toBe('-3.14')
-  expect(changeSign('0.14')).toBe('-0.14')
+it ('changes from positive to negative', () => {
+  expect(changeSign('11', '11')).toBe('-11')
+  expect(changeSign('3.14', '3.14')).toBe('-3.14')
+  expect(changeSign('0.14', '0.14')).toBe('-0.14')
+  expect(changeSign('0', '')).toBe('-0')
 })
 
 it ('changes from negative to positive', () => {
-  expect(changeSign('-1')).toBe('1')
-  expect(changeSign('-3.14')).toBe('3.14')
-  expect(changeSign('-0.14')).toBe('0.14')
+  expect(changeSign('-11', '-11')).toBe('11')
+  expect(changeSign('-3.14', '-3/14')).toBe('3.14')
+  expect(changeSign('-0.14', '-0.14')).toBe('0.14')
 })
 
 it('returns error string if divide by zero', () => {
