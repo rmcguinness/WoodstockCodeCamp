@@ -74,6 +74,7 @@
   box-shadow: 1px 1px 3px lightgray;
   color: black;
   font-size: 20px;
+  margin: 4px;
 }
 
 button:hover {
@@ -135,4 +136,3 @@ button:hover {
   grid-column: 4 / 5;
   grid-row: 3 / 4;
 }
-
