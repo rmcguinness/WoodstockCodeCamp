@@ -15,6 +15,7 @@
 import CalculatorDisplay from './CalculatorDisplay';
 import CalculatorFunctionButton from './CalculatorFunctionButton';
 import CalculatorNumberButton from './CalculatorNumberButton';
+import HomeButton from './HomeButton';
 import { functions } from './CalculatorFunctionData';
 import { buttons } from './CalculatorNumberData';
 import { Circle } from '../style';
@@ -30,6 +31,8 @@ const Calculator = () => {
   ));
   return (
     <>
+      <HomeButton/>
+
       <div className="calculator-container">
         <div className="circle-wrap">
           <Circle>
