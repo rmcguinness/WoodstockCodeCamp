@@ -32,4 +32,5 @@
   height: 40px;
   font-family: 'Orbitron', sans-serif;
   overflow: auto;
+  overflow-y: hidden;
 }

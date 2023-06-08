@@ -15,6 +15,7 @@
 import CalculatorDisplay from './CalculatorDisplay';
 import CalculatorFunctionButton from './CalculatorFunctionButton';
 import CalculatorNumberButton from './CalculatorNumberButton';
+import HomeButton from './HomeButton';
 import { functions } from './CalculatorFunctionData';
 import { buttons } from './CalculatorNumberData';
 import { Circle } from '../style';
