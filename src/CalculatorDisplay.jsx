@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 import {useRecoilState} from 'recoil';
-import {displayState} from './State.jsx';
+import { displayState } from './State.jsx';
+
+import { FaHome} from 'react-icons/fa'
 import './CalculatorDisplay.css';
 
 const CalculatorDisplay = () => {

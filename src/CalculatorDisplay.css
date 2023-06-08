@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: right;
   width: 90%;
-  /*font-size: 2rem;*/
+  font-size: 2rem;
   border: none;
   background-color: #fff;
   color: #252525;
@@ -31,4 +31,5 @@
   margin-bottom: 20px;
   height: 40px;
   font-family: 'Orbitron', sans-serif;
+  overflow: auto;
 }
