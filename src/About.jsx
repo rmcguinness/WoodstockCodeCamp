@@ -14,6 +14,7 @@
 
 import './About.css';
 import AboutProfile from './AboutProfile';
+import HomeButton from './HomeButton';
 import { Circle } from '../style';
 
 
@@ -21,6 +22,7 @@ import { Circle } from '../style';
 const About = () => {
   return (
     <>
+      <HomeButton/>
       <div className="about-header">
         <div className="about-wrapper">
           <div className="about-container">

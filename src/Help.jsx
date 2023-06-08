@@ -12,10 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 import './Help.css'
+import HomeButton from './HomeButton';
 
 const Help = () => {
   return(
     <>
+      <HomeButton/>
       <div className = "help">
         <p><strong>Note On Calculator Logic:</strong> It should be noted that there are two main 
         schools of thought on calculator input logic: immediate execution logic and formula logic.

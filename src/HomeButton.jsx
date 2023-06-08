@@ -15,13 +15,14 @@
 import './Header.css'
 import React from 'react'
 import { FaHome } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 
 const HomeButton = () => {
   return (
-    <a href="/" className='home-button'>
-      <FaHome/>
-    </a>
+    
+      <Link to="/"className='home-button'>
+      <FaHome/></Link>
   )
 }
 
