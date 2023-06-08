@@ -15,6 +15,7 @@ import "./Header.css"
 import {Link}  from "react-router-dom";
 import mainlogo from "./images-about/bendy.webp";
 import secondlogo from "./images-about/bendy2.jpg";
+import HomeButton from "./HomeButton";
 const Header = () => {
   return(
     <>

@@ -34,6 +34,9 @@ import jordanAvatar from './images-about/jordan-daniel.jpg';
 import { AiOutlineMail } from 'react-icons/ai';
 import { Profile, Paragraph, Email, Name } from '../style';
 import './About.css';
+import AboutProfile from './AboutProfile';
+import HomeButton from './HomeButton';
+import { Circle } from '../style';
 
 let bioObjs = [
   {
@@ -107,7 +110,33 @@ const About = () => {
 
   return (
     <>
-      <div className="profile-wrap">{arrayBioObjs}</div>
+      <HomeButton/>
+      <div className="about-header">
+        <div className="about-wrapper">
+          <div className="about-container">
+            <header>
+              <h3 className="orange-text">About</h3>
+              <h6 className="about-caption">Version 1.x.x</h6>
+            </header>
+
+            <p className="orange-text">
+              A single page application using React with Vite. The calculator
+              supports addition, subtraction, multiplication and division. It
+              also supports positive and negative numbers in the following
+              number sets: natural, whole, integer, and rational. The calculator
+              supports correct application of mathematical operations over time
+              and in the correct order.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <Circle className="circle-wrapper">
+        <p className="circle-text">
+          MEET THE TEAM
+        </p>
+      </Circle>
+      <AboutProfile />
     </>
   );
 };
