@@ -39,23 +39,3 @@ export const Profile = styled(motion.div)`
   align-items: center;
   text-align: center;
 `;
-
-export const Circle = styled.div`
-  border-radius: 50%;
-  width: 255px;
-  height: 255px;
-  left: 47px;
-  position: relative;
-  top: 8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #6d604f;
-  color: #e4af3a;
-  text-align: center;
-  font-size: 1.5rem;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  @media (max-width: 780px) {
-    display: none;
-  }
-`;

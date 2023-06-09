@@ -30,8 +30,6 @@ import JenilleAvatar from './images-about/20221008_170821.jpg';
 import codyAvatar from './images-about/cody.jpg';
 import zacAvatar from './images-about/zac-horton.jpg';
 import jordanAvatar from './images-about/jordan-daniel.jpg';
-
-import { AiOutlineMail } from 'react-icons/ai';
 import { Profile, Paragraph, Email, Name } from '../style';
 import './About.css';
 

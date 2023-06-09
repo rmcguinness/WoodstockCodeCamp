@@ -17,7 +17,6 @@ import CalculatorFunctionButton from './CalculatorFunctionButton';
 import CalculatorNumberButton from './CalculatorNumberButton';
 import { functions } from './CalculatorFunctionData';
 import { buttons } from './CalculatorNumberData';
-import { Circle } from '../style';
 import './Calculator.css';
 
 const Calculator = () => {
