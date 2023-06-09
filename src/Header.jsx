@@ -13,7 +13,7 @@
 // limitations under the License.
 import "./Header.css"
 import {Link}  from "react-router-dom";
-import mainlogo from "./images-about/bendy.webp";
+import mainlogo from "./images-about/bendy3.jpg";
 import secondlogo from "./images-about/bendy2.jpg";
 const Header = () => {
   return(
