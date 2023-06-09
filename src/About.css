@@ -1,0 +1,110 @@
+/**
+ * Copyright 2023 YOUR NAME HERE
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+
+:root {
+  --alt-color: #0d6efd;
+  --orange: #e4af3a;
+}
+
+img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+
+  @media (max-width: 1100px) {
+    display: flex;
+    flex-direction: column;
+
+    object-fit: cover;
+    margin: auto;
+  }
+}
+
+.orange-text {
+  color: var(--orange);
+}
+
+.circle-wrapper {
+  padding: 40px;
+}
+
+.circle-text {
+  position: relative;
+  left: 80px;
+  font-size: 2em;
+}
+
+.profile-wrap {
+  padding: 40px;
+  margin: 40px 200px;
+  display: grid;
+
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 5fr 2.5fr;
+
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Raleway", sans-serif;
+  @media (max-width: 1000px) {
+  }
+}
+
+.email-icon {
+  margin-right: 4px;
+}
+.about-header {
+  display: flex;
+  justify-content: center;
+}
+.about-wrapper {
+  background-color: #393937;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+}
+.about-wrapper h3 {
+  font-size: 3em;
+}
+.about-wrapper p {
+  float: right;
+  position: relative;
+  top: 10px;
+  font-family: "Raleway", sans-serif;
+}
+.about-container header .about-caption {
+  margin-left: 1.5px;
+  font-weight: 400;
+  color: white;
+  background-color: black;
+  max-width: 6.5rem;
+  padding: 3.5px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 780px) {
+  .profile-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
