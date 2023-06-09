@@ -29,7 +29,7 @@ li{
 }
 a{
     text-decoration: none;
-    color: rgb(239, 194, 46);
+    color: #e4af3a;
 }
 #logo{
     width:120px;
@@ -47,5 +47,5 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-margin: auto;
+    margin: auto;
 }

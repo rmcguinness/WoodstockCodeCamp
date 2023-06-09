@@ -17,7 +17,6 @@ import CalculatorFunctionButton from './CalculatorFunctionButton';
 import CalculatorNumberButton from './CalculatorNumberButton';
 import { functions } from './CalculatorFunctionData';
 import { buttons } from './CalculatorNumberData';
-import { Circle } from '../style';
 import './Calculator.css';
 
 const Calculator = () => {
@@ -29,27 +28,15 @@ const Calculator = () => {
     <CalculatorNumberButton key={num.val} obj={num} />
   ));
   return (
-    <>
-      <div className="calculator-container">
-        <div className="circle-wrap">
-          <Circle>
-            <p className="circle-caption">
-              the calculator app created by us, for you
-            </p>
-          </Circle>
-        </div>
-
-        <div id="calculatorWrapper">
-          <div id="calculatorBody">
-            <CalculatorDisplay />
-            <div id="buttons">
-              {functionButtons}
-              {numberButtons}
-            </div>
-          </div>
+    <div id="calculatorWrapper">
+      <div id="calculatorBody">
+        <CalculatorDisplay />
+        <div id="buttons">
+          {functionButtons}
+          {numberButtons}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

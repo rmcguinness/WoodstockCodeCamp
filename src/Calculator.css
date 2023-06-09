@@ -25,17 +25,6 @@
   --theme-charcoal: #111209;
 }
 
-.calculator-container {
-  display: flex;
-  font-family: 'Inter', sans-serif;
-}
-.circle-wrap {
-  margin-right: 20em;
-}
-
-#circle-caption {
-}
-
 #calculatorWrapper {
   display: flex;
   flex-direction: column;

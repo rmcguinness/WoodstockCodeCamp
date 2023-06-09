@@ -14,11 +14,9 @@
 import "./Header.css"
 import {Link}  from "react-router-dom";
 import mainlogo from "./images-about/bendy.webp";
-import secondlogo from "./images-about/bendy2.jpg";
 const Header = () => {
   return(
     <>
-      
         <nav className="header">
             <div className="nav-logo">
             <img src={mainlogo} id="logo"/>

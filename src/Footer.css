@@ -26,8 +26,7 @@
     font-size:1rem;
     font-weight: 300;
 }
-.footer-list{
-    color:red;
+.footer-list{  
     display: flex;
     justify-content: center;
 }
@@ -55,7 +54,6 @@ li{
 }
 .copyright{
     font-size: medium;
-    /* color:#cc9957; */
     color:white;
     background-color: black;
     text-align: center;
