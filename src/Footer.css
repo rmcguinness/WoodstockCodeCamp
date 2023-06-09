@@ -23,7 +23,6 @@
   flex-direction: column;
   border: 2px solid #cc9957;
   background-size: cover;
-  align-items: center;
 }
 
 .footer-background p {
@@ -51,4 +50,5 @@ li {
   font-size: medium;
   color: white;
   background-color: black;
+  text-align: center;
 }
