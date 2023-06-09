@@ -30,29 +30,15 @@ const Calculator = () => {
     <CalculatorNumberButton key={num.val} obj={num} />
   ));
   return (
-    <>
-      <HomeButton/>
-
-      <div className="calculator-container">
-        <div className="circle-wrap">
-          <Circle>
-            <p className="circle-caption">
-              the calculator app created by us, for you
-            </p>
-          </Circle>
-        </div>
-
-        <div id="calculatorWrapper">
-          <div id="calculatorBody">
-            <CalculatorDisplay />
-            <div id="buttons">
-              {functionButtons}
-              {numberButtons}
-            </div>
-          </div>
+    <div id="calculatorWrapper">
+      <div id="calculatorBody">
+        <CalculatorDisplay />
+        <div id="buttons">
+          {functionButtons}
+          {numberButtons}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

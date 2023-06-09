@@ -16,12 +16,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 
-:root {
-  --alt-color: #0d6efd;
-  --orange: #e4af3a;
-}
 
+#about-person {
+  background-color: #fefefe;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  border-radius: 5px;
+  width: 200px;
+}
 img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 10px;
   display: block;
   width: 200px;
   height: 200px;
@@ -40,22 +45,12 @@ img {
   color: var(--orange);
 }
 
-.circle-wrapper {
-  padding: 40px;
-}
-
-.circle-text {
-  position: relative;
-  left: 80px;
-  font-size: 2em;
-}
-
 .profile-wrap {
   padding: 40px;
   margin: 40px 200px;
   display: grid;
 
-  grid-gap: 1rem;
+  grid-gap: 3rem;
   grid-template-columns: 1fr 5fr 2.5fr;
 
   justify-content: center;
@@ -69,42 +64,12 @@ img {
 .email-icon {
   margin-right: 4px;
 }
-.about-header {
-  display: flex;
-  justify-content: center;
-}
-.about-wrapper {
-  background-color: #393937;
-  border-radius: 10px;
-  padding: 40px;
-  margin: 40px;
-  display: flex;
-  justify-content: center;
-  max-width: 1000px;
-}
-.about-wrapper h3 {
-  font-size: 3em;
-}
-.about-wrapper p {
-  float: right;
-  position: relative;
-  top: 10px;
-  font-family: "Raleway", sans-serif;
-}
-.about-container header .about-caption {
-  margin-left: 1.5px;
-  font-weight: 400;
-  color: white;
-  background-color: black;
-  max-width: 6.5rem;
-  padding: 3.5px;
-  display: flex;
-  justify-content: center;
-}
+
 
 @media (max-width: 780px) {
   .profile-wrap {
     display: flex;
     flex-direction: column;
+    margin: auto;
   }
 }
