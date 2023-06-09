@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const altColor = '#393937';
+export const altColor = '#1c0c02';
 
 export const Name = styled.h5`
   font-size: 1rem;
@@ -18,13 +18,14 @@ export const Paragraph = styled.div`
 
 export const Email = styled.div`
   margin-top: 4px;
+  margin-bottom: 5px;
   background-color: ${altColor};
   color: white;
   font-weight: 600;
   padding: 4px;
   border-radius: 4px;
   width: auto;
-
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `;

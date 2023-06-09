@@ -15,7 +15,25 @@ import './Help.css'
 
 const Help = () => {
   return(
-    <>
+    <div id="card">
+      <div className="about-header">
+        <div className="about-wrapper">
+          <div className="about-container">
+            <header>
+              <h6 className="about-caption">Calculator Version 1.x.x</h6>
+            </header>
+
+            <p className="orange-text">
+              A single page application using React with Vite. The calculator
+              supports addition, subtraction, multiplication and division. It
+              also supports positive and negative numbers in the following
+              number sets: natural, whole, integer, and rational. The calculator
+              supports correct application of mathematical operations over time
+              and in the correct order.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className = "help">
         <p><strong>Note On Calculator Logic:</strong> It should be noted that there are two main 
         schools of thought on calculator input logic: immediate execution logic and formula logic.
@@ -37,7 +55,7 @@ const Help = () => {
           <div className = "flex-item"><p>32.5</p></div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -13,9 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-.help {
-  height: 100vh;
 
+ :root {
+  --alt-color: #0d6efd;
+  --orange: #e4af3a;
+}
+
+#card {
+  background-color: #fefefe;
+  display: flex;
+  width: 75%;
+  margin: 100px auto;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+}
+
+.help {
+  padding: 25px 0 25px 0;
 }
 
 .help > p:first-child {
@@ -26,7 +41,6 @@
 .flex-container {
   display: flex;
   justify-content: center;
-
 }
 
 .flex-item:nth-child(odd) {
@@ -38,4 +52,43 @@
 .flex-item:nth-child(even) {
   width: 100%;
   text-align: left;
+}
+
+.about-header {
+  display: flex;
+  justify-content: center;
+}
+.about-wrapper {
+  background-color: #1c0c02;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+.about-wrapper h3 {
+  font-size: 3em;
+}
+.about-wrapper p {
+  float: right;
+  position: relative;
+  top: 10px;
+  font-family: "Raleway", sans-serif;
+  color: #d9d9d9;
+}
+.about-container header .about-caption {
+  font-weight: 400;
+  color: var(--orange);  
+  max-width: 12rem;
+  display: flex;
+}
+
+@media (max-width: 780px) {
+  .profile-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  #card{
+    flex-direction: column;
+  }
 }
