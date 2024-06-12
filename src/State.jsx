@@ -1,9 +1,12 @@
 import { atom } from 'recoil';
 
-//This is an example
-const strState = atom ({
-    key: "strState",
-    default: "0"
+//for displaying the string
+export const displayState = atom ({
+    key: 'display',
+    default: '0',
 });
-
-export { strState }
+//for equation to be evaluated
+export const equationState = atom({
+    key: 'equation',
+    default: '',
+});
